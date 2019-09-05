@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/CustomUI"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:element
+ name="MoveModifyAssetToQuote_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="QuoteNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DueDate"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSCSRId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NewPromotionId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSChannelName"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RequestType"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderSubType"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceOnSync"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetIntegrationId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSReasonCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveDocumentId"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="MoveModifyAssetToQuote_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="ActiveQuoteId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcMessage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+></types
+><message
+ name="MoveModifyAssetToQuote_Input"
+><part
+ name="MoveModifyAssetToQuote_Input"
+ element="tns:MoveModifyAssetToQuote_Input"
+></part
+></message
+><message
+ name="MoveModifyAssetToQuote_Output"
+><part
+ name="MoveModifyAssetToQuote_Output"
+ element="tns:MoveModifyAssetToQuote_Output"
+></part
+></message
+><portType
+ name="TSC2BMoveOrderWebService"
+><operation
+ name="MoveModifyAssetToQuote"
+><input
+ message="tns:MoveModifyAssetToQuote_Input"
+></input
+><output
+ message="tns:MoveModifyAssetToQuote_Output"
+></output
+></operation
+></portType
+><binding
+ name="TSC2BMoveOrderWebService"
+ type="tns:TSC2BMoveOrderWebService"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="MoveModifyAssetToQuote"
+><soap:operation
+ soapAction="document/http://siebel.com/CustomUI:MoveModifyAssetToQuote"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="TSC2BMoveOrderWebService"
+><port
+ binding="tns:TSC2BMoveOrderWebService"
+ name="TSC2BMoveOrderWebService"
+><soap:address
+ location="http://tr010bucrm.ddc.teliasonera.net:8080/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1AP=1"
+></soap:address
+></port
+></service
+></definitions
+>

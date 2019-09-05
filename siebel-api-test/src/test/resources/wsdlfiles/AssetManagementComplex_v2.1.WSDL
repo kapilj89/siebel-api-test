@@ -1,0 +1,2325 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:xsdLocal1="http://www.siebel.com/xml/Asset_Management_Complex_IO/Data"
+ targetNamespace="http://www.siebel.com/Service/FS/Assets"
+ xmlns:xsdLocal3="http://www.siebel.com/xml/Asset_Management_Complex_IO/Query"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsdLocal2="http://www.siebel.com/xml/Asset_Management_Complex_IO/Id"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://www.siebel.com/Service/FS/Assets"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://www.siebel.com/xml/Asset_Management_Complex_IO/Query"
+ xmlns:xsdLocal3="http://www.siebel.com/xml/Asset_Management_Complex_IO/Query"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfAsset"
+ type="xsdLocal3:ListOfAssetQuery"
+></xsd:element
+><xsd:complexType
+ name="ListOfAssetTopElmtQuery"
+><xsd:sequence
+><xsd:element
+ name="ListOfAsset"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfAssetQuery"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetQuery"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-Asset-Header"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:AssetMgmt-Asset-HeaderQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-Asset-HeaderQuery"
+><xsd:sequence
+><xsd:element
+ name="TSCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSVASActivationKey"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSTVAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSPlayPlusLoginName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="FulfillmentItemCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetSubStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementLineStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementItemStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementItemEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="BillingType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AdjustedListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="CompoundProductNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="InstallDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="MfgDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="OwnerAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="OwnerContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="OwnerContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="OwnerContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryEmployeeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProdPromInstanceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductPartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="PurchaseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="RegisteredDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="RootAssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="SerialNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ShipDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="BillingProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSVASRegistrationStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSProductCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSProductSubCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfAssetMgmt-Asset"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfAssetMgmt-AssetQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetMgmt-AssetQuery"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-Asset"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:AssetMgmt-AssetQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-AssetQuery"
+><xsd:sequence
+><xsd:element
+ name="TSAtrributeAccessType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSDeliveryContractId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSMDUDeliveryContractRevNum"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSMDUServiceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSVoIPDeviceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSMDUActivationType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSMDUDeliveryContractNum"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSPlayPlusLoginName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSTVAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementItemEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementItemStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSAgreementLineStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetSubStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="FulfillmentItemCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="NRCCxTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="MRCCxTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AdjustedListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="AssetNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="CompoundProductNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="InstallDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="MfgDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ParentAssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProdPromId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductPartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ProductType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="PurchaseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Quantity2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="RegisteredDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="RootAssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="RootIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="SerialNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ShipDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="SmartPartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Version"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSKeyExpiryDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSOrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSVASActivationKey"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSVASRegistrationStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSProductShipFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSSAPrimaryAddresId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSSAPrimaryAddrPointId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="BillingProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSReasonCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSProductSubCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSProductCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ConnectivityReferenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="TSPSTNNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfAssetMgmt-AssetXa"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfAssetMgmt-AssetXaQuery"
+></xsd:element
+><xsd:element
+ name="AssetMgmt-Asset"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:AssetMgmt-AssetQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetMgmt-AssetXaQuery"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-AssetXa"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:AssetMgmt-AssetXaQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-AssetXaQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Hidden"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Name2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="ReadOnly"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Required"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="queryType"
+><xsd:simpleContent
+><xsd:extension
+ base="xsd:string"
+><xsd:attribute
+ name="sortorder"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="sortsequence"
+ type="xsd:string"
+></xsd:attribute
+></xsd:extension
+></xsd:simpleContent
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://www.siebel.com/xml/Asset_Management_Complex_IO/Id"
+ xmlns:xsdLocal2="http://www.siebel.com/xml/Asset_Management_Complex_IO/Id"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfAsset"
+ type="xsdLocal2:ListOfAssetId"
+></xsd:element
+><xsd:complexType
+ name="ListOfAssetTopElmtId"
+><xsd:sequence
+><xsd:element
+ name="ListOfAsset"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal2:ListOfAssetId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetId"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-Asset-Header"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:AssetMgmt-Asset-HeaderId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-Asset-HeaderId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfAssetMgmt-Asset"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfAssetMgmt-AssetId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetMgmt-AssetId"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-Asset"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:AssetMgmt-AssetId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-AssetId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfAssetMgmt-AssetXa"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfAssetMgmt-AssetXaId"
+></xsd:element
+><xsd:element
+ name="AssetMgmt-Asset"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:AssetMgmt-AssetId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetMgmt-AssetXaId"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-AssetXa"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:AssetMgmt-AssetXaId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-AssetXaId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ xmlns:xsdLocal1="http://www.siebel.com/xml/Asset_Management_Complex_IO/Data"
+ targetNamespace="http://www.siebel.com/xml/Asset_Management_Complex_IO/Data"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfAsset"
+ type="xsdLocal1:ListOfAssetData"
+></xsd:element
+><xsd:complexType
+ name="ListOfAssetTopElmtData"
+><xsd:sequence
+><xsd:element
+ name="ListOfAsset"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal1:ListOfAssetData"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetData"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-Asset-Header"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal1:AssetMgmt-Asset-HeaderData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-Asset-HeaderData"
+><xsd:sequence
+><xsd:element
+ name="TSCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="TSVASActivationKey"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="TSTVAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSPlayPlusLoginName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FulfillmentItemCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetSubStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSAgreementLineStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSAgreementLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSAgreementItemStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="TSAgreementItemEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="TSAgreementId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="AccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AdjustedListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="AssetCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CompoundProductNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InstallDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MfgDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OwnerAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OwnerContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OwnerContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OwnerContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryEmployeeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProdPromInstanceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductPartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PurchaseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="RegisteredDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="RootAssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SerialNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSVASRegistrationStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductSubCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfAssetMgmt-Asset"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfAssetMgmt-AssetData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetMgmt-AssetData"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-Asset"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal1:AssetMgmt-AssetData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-AssetData"
+><xsd:sequence
+><xsd:element
+ name="TSAtrributeAccessType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSDeliveryContractId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSMDUDeliveryContractRevNum"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="TSMDUServiceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSVoIPDeviceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSMDUActivationType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSMDUDeliveryContractNum"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSPlayPlusLoginName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSTVAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSAgreementId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSAgreementItemEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="TSAgreementItemStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="TSAgreementLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSAgreementLineStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetSubStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FulfillmentItemCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NRCCxTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="MRCCxTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="AdjustedListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="AssetCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CompoundProductNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="InstallDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MfgDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentAssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProdPromId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductPartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PurchaseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Quantity2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="RegisteredDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="RootAssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SerialNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="SmartPartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Version"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSKeyExpiryDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="TSOrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSVASActivationKey"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSVASRegistrationStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductShipFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="TSSAPrimaryAddresId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSSAPrimaryAddrPointId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSReasonCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductSubCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConnectivityReferenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSPSTNNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ListOfAssetMgmt-AssetXa"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfAssetMgmt-AssetXaData"
+></xsd:element
+><xsd:element
+ name="AssetMgmt-Asset"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal1:AssetMgmt-AssetData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAssetMgmt-AssetXaData"
+><xsd:sequence
+><xsd:element
+ name="AssetMgmt-AssetXa"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal1:AssetMgmt-AssetXaData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AssetMgmt-AssetXaData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Hidden"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReadOnly"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Required"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://www.siebel.com/Service/FS/Assets"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:import
+ namespace="http://www.siebel.com/xml/Asset_Management_Complex_IO/Query"
+></xsd:import
+><xsd:import
+ namespace="http://www.siebel.com/xml/Asset_Management_Complex_IO/Id"
+></xsd:import
+><xsd:import
+ namespace="http://www.siebel.com/xml/Asset_Management_Complex_IO/Data"
+></xsd:import
+><xsd:element
+ name="AssetManagementComplexInsert_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal1:ListOfAsset"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="AssetManagementComplexInsert_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfAsset"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="AssetManagementComplexUpdate_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal1:ListOfAsset"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="AssetManagementComplexUpdate_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfAsset"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="AssetManagementComplexQueryPage_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="NamedSearchSpec"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfAsset"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="AssetManagementComplexQueryPage_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal1:ListOfAsset"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+></types
+><message
+ name="AssetManagementComplexInsert_Input"
+><part
+ name="AssetManagementComplexInsert_Input"
+ element="tns:AssetManagementComplexInsert_Input"
+></part
+></message
+><message
+ name="AssetManagementComplexInsert_Output"
+><part
+ name="AssetManagementComplexInsert_Output"
+ element="tns:AssetManagementComplexInsert_Output"
+></part
+></message
+><message
+ name="AssetManagementComplexUpdate_Input"
+><part
+ name="AssetManagementComplexUpdate_Input"
+ element="tns:AssetManagementComplexUpdate_Input"
+></part
+></message
+><message
+ name="AssetManagementComplexUpdate_Output"
+><part
+ name="AssetManagementComplexUpdate_Output"
+ element="tns:AssetManagementComplexUpdate_Output"
+></part
+></message
+><message
+ name="AssetManagementComplexQueryPage_Input"
+><part
+ name="AssetManagementComplexQueryPage_Input"
+ element="tns:AssetManagementComplexQueryPage_Input"
+></part
+></message
+><message
+ name="AssetManagementComplexQueryPage_Output"
+><part
+ name="AssetManagementComplexQueryPage_Output"
+ element="tns:AssetManagementComplexQueryPage_Output"
+></part
+></message
+><portType
+ name="AssetManagementComplexPort"
+><operation
+ name="AssetManagementComplexInsert"
+><input
+ message="tns:AssetManagementComplexInsert_Input"
+></input
+><output
+ message="tns:AssetManagementComplexInsert_Output"
+></output
+></operation
+><operation
+ name="AssetManagementComplexUpdate"
+><input
+ message="tns:AssetManagementComplexUpdate_Input"
+></input
+><output
+ message="tns:AssetManagementComplexUpdate_Output"
+></output
+></operation
+><operation
+ name="AssetManagementComplexQueryPage"
+><input
+ message="tns:AssetManagementComplexQueryPage_Input"
+></input
+><output
+ message="tns:AssetManagementComplexQueryPage_Output"
+></output
+></operation
+></portType
+><binding
+ name="AssetManagementComplexPort"
+ type="tns:AssetManagementComplexPort"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="AssetManagementComplexInsert"
+><soap:operation
+ soapAction="document/http://www.siebel.com/Service/FS/Assets:AssetManagementComplexInsert"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="AssetManagementComplexUpdate"
+><soap:operation
+ soapAction="document/http://www.siebel.com/Service/FS/Assets:AssetManagementComplexUpdate"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="AssetManagementComplexQueryPage"
+><soap:operation
+ soapAction="document/http://www.siebel.com/Service/FS/Assets:AssetManagementComplexQueryPage"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="AssetManagementComplex"
+><port
+ binding="tns:AssetManagementComplexPort"
+ name="AssetManagementComplexPort"
+><soap:address
+ location="http://tr001atcrw.ddc.teliasonera.net:8080/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"
+></soap:address
+></port
+></service
+></definitions
+>

@@ -1,0 +1,2039 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:xsdLocal1="http://siebel.com/SelfService/Common/Address/Query"
+ targetNamespace="http://siebel.com/SelfService/Common/Address"
+ xmlns:xsdLocal3="http://siebel.com/SelfService/Common/Address/Id"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsdLocal2="http://siebel.com/SelfService/Common/Address/Data"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/SelfService/Common/Address"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ xmlns:xsdLocal1="http://siebel.com/SelfService/Common/Address/Query"
+ targetNamespace="http://siebel.com/SelfService/Common/Address/Query"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfSs_Address_Io"
+ type="xsdLocal1:ListOfSs_Address_IoQuery"
+></xsd:element
+><xsd:complexType
+ name="ListOfSs_Address_IoTopElmtQuery"
+><xsd:sequence
+><xsd:element
+ name="ListOfSs_Address_Io"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfSs_Address_IoQuery"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfSs_Address_IoQuery"
+><xsd:sequence
+><xsd:element
+ name="CutAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:CutAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CutAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="TSHDBlockFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSHDStream"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSSDStream"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSVDSLBlockFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountLoc"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressLine3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ActiveStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Addressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressNameLockedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Altitude"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ApartmentNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BrickId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BrickName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="City"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Country"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="County"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Descriptor"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DisableDataCleansing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FaxNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LandlordName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LandlordPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Latitude"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Longitude"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MailCodeORG"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MailTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MainAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OccupancyCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ParentLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PremiseFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Province"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="S-SInstance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="State"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UTMEasting"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UTMNorthing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSApartmentNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSBillingAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSPostalFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSEntrance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSExistingLANAvail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSFMOId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSFiberSmallBusinesses"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSFiberVilla"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSInstallationAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSLeftRight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSLegalAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSLocationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSMunicipality"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSPointId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSProperty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSPropertyType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSShippingAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSStation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSStreetAddress5"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSStreetAddress6"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSStreetNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSXCoordinate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSYCoordinate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSAttentionInformation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSCareOfField"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TSFiberStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfCUTAddress_MVAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfCUTAddress_MVAccountQuery"
+></xsd:element
+><xsd:element
+ name="ListOfCUTAddress_MVContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfCUTAddress_MVContactQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCUTAddress_MVAccountQuery"
+><xsd:sequence
+><xsd:element
+ name="CUTAddress_MVAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:CUTAddress_MVAccountQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CUTAddress_MVAccountQuery"
+><xsd:sequence
+><xsd:element
+ name="MVAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Location"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCUTAddress_MVContactQuery"
+><xsd:sequence
+><xsd:element
+ name="CUTAddress_MVContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:CUTAddress_MVContactQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CUTAddress_MVContactQuery"
+><xsd:sequence
+><xsd:element
+ name="MVContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EmployeeNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonUId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganization2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="queryType"
+><xsd:simpleContent
+><xsd:extension
+ base="xsd:string"
+><xsd:attribute
+ name="sortorder"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="sortsequence"
+ type="xsd:string"
+></xsd:attribute
+></xsd:extension
+></xsd:simpleContent
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/SelfService/Common/Address"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:import
+ namespace="http://siebel.com/SelfService/Common/Address/Id"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/SelfService/Common/Address/Data"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/SelfService/Common/Address/Query"
+></xsd:import
+><xsd:element
+ name="SelfServiceAddressQueryPage_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="NamedSearchSpec"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal1:ListOfSs_Address_Io"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PickListName"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressQueryPage_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfSs_Address_Io"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressExecute_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfSs_Address_Io"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressExecute_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal3:ListOfSs_Address_Io"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressInsert_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfSs_Address_Io"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressInsert_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal3:ListOfSs_Address_Io"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressInit_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfSs_Address_Io"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressInit_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfSs_Address_Io"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressUpdate_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfSs_Address_Io"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressUpdate_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal3:ListOfSs_Address_Io"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressDelete_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal3:ListOfSs_Address_Io"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceAddressDelete_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal3:ListOfSs_Address_Io"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/SelfService/Common/Address/Id"
+ xmlns:xsdLocal3="http://siebel.com/SelfService/Common/Address/Id"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfSs_Address_Io"
+ type="xsdLocal3:ListOfSs_Address_IoId"
+></xsd:element
+><xsd:complexType
+ name="ListOfSs_Address_IoTopElmtId"
+><xsd:sequence
+><xsd:element
+ name="ListOfSs_Address_Io"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal3:ListOfSs_Address_IoId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfSs_Address_IoId"
+><xsd:sequence
+><xsd:element
+ name="CutAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:CutAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="CutAddressId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfCUTAddress_MVAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfCUTAddress_MVAccountId"
+></xsd:element
+><xsd:element
+ name="ListOfCUTAddress_MVContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfCUTAddress_MVContactId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCUTAddress_MVAccountId"
+><xsd:sequence
+><xsd:element
+ name="CUTAddress_MVAccount"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:CUTAddress_MVAccountId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="CUTAddress_MVAccountId"
+><xsd:sequence
+><xsd:element
+ name="MVAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCUTAddress_MVContactId"
+><xsd:sequence
+><xsd:element
+ name="CUTAddress_MVContact"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:CUTAddress_MVContactId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="CUTAddress_MVContactId"
+><xsd:sequence
+><xsd:element
+ name="MVContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/SelfService/Common/Address/Data"
+ xmlns:xsdLocal2="http://siebel.com/SelfService/Common/Address/Data"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfSs_Address_Io"
+ type="xsdLocal2:ListOfSs_Address_IoData"
+></xsd:element
+><xsd:complexType
+ name="ListOfSs_Address_IoTopElmtData"
+><xsd:sequence
+><xsd:element
+ name="ListOfSs_Address_Io"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal2:ListOfSs_Address_IoData"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfSs_Address_IoData"
+><xsd:sequence
+><xsd:element
+ name="CutAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:CutAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CutAddressData"
+><xsd:sequence
+><xsd:element
+ name="TSHDBlockFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="TSHDStream"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="TSSDStream"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="TSVDSLBlockFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountLoc"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressLine3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="AddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Addressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressNameLockedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="AddressType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Altitude"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ApartmentNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="BrickId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BrickName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="City"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Country"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="County"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Descriptor"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisableDataCleansing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="EmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FaxNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LandlordName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LandlordPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Latitude"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="Longitude"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="MailCodeORG"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MailTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MainAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="OccupancyCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PremiseFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Province"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="S-SInstance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="State"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UTMEasting"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UTMNorthing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSApartmentNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSBillingAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="TSPostalFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="TSEntrance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSExistingLANAvail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSFMOId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSFiberSmallBusinesses"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSFiberVilla"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSInstallationAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="TSLeftRight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSLegalAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="TSLocationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSMunicipality"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSPointId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProperty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSPropertyType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSShippingAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="TSStation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSStreetAddress5"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSStreetAddress6"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSStreetNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSXCoordinate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSYCoordinate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSAttentionInformation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSCareOfField"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSFiberStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfCUTAddress_MVAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfCUTAddress_MVAccountData"
+></xsd:element
+><xsd:element
+ name="ListOfCUTAddress_MVContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfCUTAddress_MVContactData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCUTAddress_MVAccountData"
+><xsd:sequence
+><xsd:element
+ name="CUTAddress_MVAccount"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:CUTAddress_MVAccountData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CUTAddress_MVAccountData"
+><xsd:sequence
+><xsd:element
+ name="MVAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Location"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCUTAddress_MVContactData"
+><xsd:sequence
+><xsd:element
+ name="CUTAddress_MVContact"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:CUTAddress_MVContactData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CUTAddress_MVContactData"
+><xsd:sequence
+><xsd:element
+ name="MVContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="EmployeeNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonUId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganization2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+></types
+><message
+ name="SelfServiceAddressQueryPage_Input"
+><part
+ name="SelfServiceAddressQueryPage_Input"
+ element="tns:SelfServiceAddressQueryPage_Input"
+></part
+></message
+><message
+ name="SelfServiceAddressQueryPage_Output"
+><part
+ name="SelfServiceAddressQueryPage_Output"
+ element="tns:SelfServiceAddressQueryPage_Output"
+></part
+></message
+><message
+ name="SelfServiceAddressExecute_Input"
+><part
+ name="SelfServiceAddressExecute_Input"
+ element="tns:SelfServiceAddressExecute_Input"
+></part
+></message
+><message
+ name="SelfServiceAddressExecute_Output"
+><part
+ name="SelfServiceAddressExecute_Output"
+ element="tns:SelfServiceAddressExecute_Output"
+></part
+></message
+><message
+ name="SelfServiceAddressInsert_Input"
+><part
+ name="SelfServiceAddressInsert_Input"
+ element="tns:SelfServiceAddressInsert_Input"
+></part
+></message
+><message
+ name="SelfServiceAddressInsert_Output"
+><part
+ name="SelfServiceAddressInsert_Output"
+ element="tns:SelfServiceAddressInsert_Output"
+></part
+></message
+><message
+ name="SelfServiceAddressInit_Input"
+><part
+ name="SelfServiceAddressInit_Input"
+ element="tns:SelfServiceAddressInit_Input"
+></part
+></message
+><message
+ name="SelfServiceAddressInit_Output"
+><part
+ name="SelfServiceAddressInit_Output"
+ element="tns:SelfServiceAddressInit_Output"
+></part
+></message
+><message
+ name="SelfServiceAddressUpdate_Input"
+><part
+ name="SelfServiceAddressUpdate_Input"
+ element="tns:SelfServiceAddressUpdate_Input"
+></part
+></message
+><message
+ name="SelfServiceAddressUpdate_Output"
+><part
+ name="SelfServiceAddressUpdate_Output"
+ element="tns:SelfServiceAddressUpdate_Output"
+></part
+></message
+><message
+ name="SelfServiceAddressDelete_Input"
+><part
+ name="SelfServiceAddressDelete_Input"
+ element="tns:SelfServiceAddressDelete_Input"
+></part
+></message
+><message
+ name="SelfServiceAddressDelete_Output"
+><part
+ name="SelfServiceAddressDelete_Output"
+ element="tns:SelfServiceAddressDelete_Output"
+></part
+></message
+><portType
+ name="SelfServiceAddress"
+><operation
+ name="SelfServiceAddressQueryPage"
+><input
+ message="tns:SelfServiceAddressQueryPage_Input"
+></input
+><output
+ message="tns:SelfServiceAddressQueryPage_Output"
+></output
+></operation
+><operation
+ name="SelfServiceAddressExecute"
+><input
+ message="tns:SelfServiceAddressExecute_Input"
+></input
+><output
+ message="tns:SelfServiceAddressExecute_Output"
+></output
+></operation
+><operation
+ name="SelfServiceAddressInsert"
+><input
+ message="tns:SelfServiceAddressInsert_Input"
+></input
+><output
+ message="tns:SelfServiceAddressInsert_Output"
+></output
+></operation
+><operation
+ name="SelfServiceAddressInit"
+><input
+ message="tns:SelfServiceAddressInit_Input"
+></input
+><output
+ message="tns:SelfServiceAddressInit_Output"
+></output
+></operation
+><operation
+ name="SelfServiceAddressUpdate"
+><input
+ message="tns:SelfServiceAddressUpdate_Input"
+></input
+><output
+ message="tns:SelfServiceAddressUpdate_Output"
+></output
+></operation
+><operation
+ name="SelfServiceAddressDelete"
+><input
+ message="tns:SelfServiceAddressDelete_Input"
+></input
+><output
+ message="tns:SelfServiceAddressDelete_Output"
+></output
+></operation
+></portType
+><binding
+ name="SelfServiceAddress"
+ type="tns:SelfServiceAddress"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="SelfServiceAddressQueryPage"
+><soap:operation
+ soapAction="document/http://siebel.com/SelfService/Common/Address:SelfServiceAddressQueryPage"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="SelfServiceAddressExecute"
+><soap:operation
+ soapAction="document/http://siebel.com/SelfService/Common/Address:SelfServiceAddressExecute"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="SelfServiceAddressInsert"
+><soap:operation
+ soapAction="document/http://siebel.com/SelfService/Common/Address:SelfServiceAddressInsert"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="SelfServiceAddressInit"
+><soap:operation
+ soapAction="document/http://siebel.com/SelfService/Common/Address:SelfServiceAddressInit"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="SelfServiceAddressUpdate"
+><soap:operation
+ soapAction="document/http://siebel.com/SelfService/Common/Address:SelfServiceAddressUpdate"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="SelfServiceAddressDelete"
+><soap:operation
+ soapAction="document/http://siebel.com/SelfService/Common/Address:SelfServiceAddressDelete"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="SelfServiceAddress"
+><port
+ binding="tns:SelfServiceAddress"
+ name="SelfServiceAddress"
+><soap:address
+ location="http://tr009bucrm.ddc.teliasonera.net:8080/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"
+></soap:address
+></port
+></service
+></definitions
+>

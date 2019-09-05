@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/CustomUI"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:element
+ name="SWICancelSalesOrder_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="OrderId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Process_spcInstance_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="sAgreement_spcType"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Enable_spcLog"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="HT_spcCount"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Return_spcMessage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BundleCount"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="sOrderConfirmation"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="sAgreementStatus"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Siebel_spcOperation_spcObject_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TroubleTicketId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderStatus"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DueDateDiff"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Return_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveViewName"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RecCount"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MethodNameforVoIP"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderChangeReason"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcMessage"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SWICancelSalesOrder_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="ActiveViewName"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BundleCount"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DueDateDiff"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Enable_spcLog"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcMessage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="HT_spcCount"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MethodNameforVoIP"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderChangeReason"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderStatus"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Process_spcInstance_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RecCount"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Return_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Return_spcMessage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Siebel_spcOperation_spcObject_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TroubleTicketId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="sAgreement_spcType"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="sAgreementStatus"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="sOrderConfirmation"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+></types
+><message
+ name="SWICancelSalesOrder_Input"
+><part
+ name="SWICancelSalesOrder_Input"
+ element="tns:SWICancelSalesOrder_Input"
+></part
+></message
+><message
+ name="SWICancelSalesOrder_Output"
+><part
+ name="SWICancelSalesOrder_Output"
+ element="tns:SWICancelSalesOrder_Output"
+></part
+></message
+><portType
+ name="SWICancel_spcSales_spcOrder"
+><operation
+ name="SWICancelSalesOrder"
+><input
+ message="tns:SWICancelSalesOrder_Input"
+></input
+><output
+ message="tns:SWICancelSalesOrder_Output"
+></output
+></operation
+></portType
+><binding
+ name="SWICancel_spcSales_spcOrder"
+ type="tns:SWICancel_spcSales_spcOrder"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="SWICancelSalesOrder"
+><soap:operation
+ soapAction="document/http://siebel.com/CustomUI:SWICancelSalesOrder"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="SWICancel_spcSales_spcOrder"
+><port
+ binding="tns:SWICancel_spcSales_spcOrder"
+ name="SWICancel_spcSales_spcOrder"
+><soap:address
+ location="http://tr001atcrw.ddc.teliasonera.net:8080/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"
+></soap:address
+></port
+></service
+></definitions
+>

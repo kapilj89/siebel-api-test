@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/CustomUI"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:element
+ name="TSChannelSubmitOrder_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="OrderRevisionNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FulfillmentMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentOrderStatus"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="TSChannelSubmitOrder_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="Error_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcMessage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderNumber"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+></types
+><message
+ name="TSChannelSubmitOrder_Input"
+><part
+ name="TSChannelSubmitOrder_Input"
+ element="tns:TSChannelSubmitOrder_Input"
+></part
+></message
+><message
+ name="TSChannelSubmitOrder_Output"
+><part
+ name="TSChannelSubmitOrder_Output"
+ element="tns:TSChannelSubmitOrder_Output"
+></part
+></message
+><portType
+ name="TSChannelSISOMBillingSubmitOrderWebService"
+><operation
+ name="TSChannelSubmitOrder"
+><input
+ message="tns:TSChannelSubmitOrder_Input"
+></input
+><output
+ message="tns:TSChannelSubmitOrder_Output"
+></output
+></operation
+></portType
+><binding
+ name="TSChannelSISOMBillingSubmitOrderWebService"
+ type="tns:TSChannelSISOMBillingSubmitOrderWebService"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="TSChannelSubmitOrder"
+><soap:operation
+ soapAction="document/http://siebel.com/CustomUI:TSChannelSubmitOrder"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="TSChannelSISOMBillingSubmitOrderWebService"
+><port
+ binding="tns:TSChannelSISOMBillingSubmitOrderWebService"
+ name="TSChannelSISOMBillingSubmitOrderWebService"
+><soap:address
+ location="http://tr004stcrm.ddc.teliasonera.net:8080/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"
+></soap:address
+></port
+></service
+></definitions
+>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ targetNamespace="http://siebel.com/OrderManagement/Quote/Quoting"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/OrderManagement/Quote/Quoting"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Quote/Quoting"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:element
+ name="QuoteCheckOut_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="CreditCardAuthorizationFlag"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AutoOrderFlag"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InvokeId"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="QuoteCheckOut_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="ActiveOrderId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveOrderNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcMessage"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+></types
+><message
+ name="QuoteCheckOut_Input"
+><part
+ name="QuoteCheckOut_Input"
+ element="tns:QuoteCheckOut_Input"
+></part
+></message
+><message
+ name="QuoteCheckOut_Output"
+><part
+ name="QuoteCheckOut_Output"
+ element="tns:QuoteCheckOut_Output"
+></part
+></message
+><portType
+ name="QuoteCheckOutPort"
+><operation
+ name="QuoteCheckOut"
+><input
+ message="tns:QuoteCheckOut_Input"
+></input
+><output
+ message="tns:QuoteCheckOut_Output"
+></output
+></operation
+></portType
+><binding
+ name="QuoteCheckOutPort"
+ type="tns:QuoteCheckOutPort"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="QuoteCheckOut"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Quote/Quoting:QuoteCheckOut"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="QuoteCheckOutWebService"
+><port
+ binding="tns:QuoteCheckOutPort"
+ name="QuoteCheckOutPort"
+><soap:address
+ location="http://tr009bucrm.ddc.teliasonera.net:8080/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"
+></soap:address
+></port
+></service
+></definitions
+>

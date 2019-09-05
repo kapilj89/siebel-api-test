@@ -1,0 +1,6907 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns:xsdLocal16="http://siebel.com/OrderManagement/Catalog/Data/UDSPublishCatalog/Data"
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:xsdLocal13="http://siebel.com/OrderManagement/Catalog/Data/PublishCatalog"
+ xmlns:xsdLocal8="http://siebel.com/OrderManagement/Catalog/Data/CategoryProduct"
+ xmlns:xsdLocal10="http://siebel.com/OrderManagement/Catalog/Data/ProductAttributeDomain"
+ xmlns:xsdLocal11="http://siebel.com/OrderManagement/Catalog/Data/Categories"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:xsdLocal15="http://siebel.com/OrderManagement/Catalog/Data/UDSPublishCatalog/Query"
+ xmlns:xsdLocal9="http://siebel.com/OrderManagement/Catalog/Data/ProductDetails"
+ xmlns:xsdLocal1="http://siebel.com/OrderManagement/Catalog/Data/SearchableProductClass"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog"
+ xmlns:xsdLocal3="http://siebel.com/OrderManagement/Catalog/Data/CatalogContext"
+ xmlns:xsdLocal5="http://siebel.com/OrderManagement/Catalog/Data/Product"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsdLocal14="http://siebel.com/OrderManagement/Catalog/Data/Catalog"
+ xmlns:xsdLocal12="http://siebel.com/OrderManagement/Catalog/Data/Category"
+ xmlns:xsdLocal6="http://siebel.com/OrderManagement/Catalog/Data/RelatedPromotions"
+ xmlns:xsdLocal4="http://siebel.com/OrderManagement/Catalog/Data/ProductChildren"
+ xmlns:xsdLocal2="http://siebel.com/OrderManagement/Catalog/Data/ProductClassAttributes"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/OrderManagement/Catalog"
+ xmlns:xsdLocal7="http://siebel.com/OrderManagement/Catalog/Data/RelatedProducts"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ xmlns:xsdLocal13="http://siebel.com/OrderManagement/Catalog/Data/PublishCatalog"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/PublishCatalog"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfPublishCatalog"
+ type="xsdLocal13:ListOfPublishCatalog"
+></xsd:element
+><xsd:complexType
+ name="ListOfPublishCatalogTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfPublishCatalog"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal13:ListOfPublishCatalog"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfPublishCatalog"
+><xsd:sequence
+><xsd:element
+ name="Catalog"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal13:Catalog"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Catalog"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Active"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Version"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal13:ListOfCategory"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCategory"
+><xsd:sequence
+><xsd:element
+ name="Category"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal13:Category"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Category"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Count"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayTemplate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NoTrainingFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ResponseThreshold"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Usage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal13:ListOfProduct"
+></xsd:element
+><xsd:element
+ name="Category"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal13:Category"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProduct"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal13:Product"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Product"
+><xsd:sequence
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CostListItemCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DefectiveProductState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfIssProductAttributeVbc"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal13:ListOfIssProductAttributeVbc"
+></xsd:element
+><xsd:element
+ name="ListOfNetPriceWaterfall"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal13:ListOfNetPriceWaterfall"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfIssProductAttributeVbc"
+><xsd:sequence
+><xsd:element
+ name="IssProductAttributeVbc"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal13:IssProductAttributeVbc"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="IssProductAttributeVbc"
+><xsd:sequence
+><xsd:element
+ name="AttributeName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DefaultValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfNetPriceWaterfall"
+><xsd:sequence
+><xsd:element
+ name="NetPriceWaterfall"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal13:NetPriceWaterfall"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="NetPriceWaterfall"
+><xsd:sequence
+><xsd:element
+ name="AdjustmentAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Price"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AdjustmentType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Text"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ xmlns:xsdLocal11="http://siebel.com/OrderManagement/Catalog/Data/Categories"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/Categories"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfCategory"
+ type="xsdLocal11:ListOfCategory"
+></xsd:element
+><xsd:complexType
+ name="ListOfCategoryTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfCategory"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal11:ListOfCategory"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCategory"
+><xsd:sequence
+><xsd:element
+ name="Category"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal11:Category"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Category"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogEffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogEffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Count"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayTemplate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NoTrainingFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ResponseThreshold"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Usage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ xmlns:xsdLocal10="http://siebel.com/OrderManagement/Catalog/Data/ProductAttributeDomain"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/ProductAttributeDomain"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfProductAttributeDomain"
+ type="xsdLocal10:ListOfProductAttributeDomain"
+></xsd:element
+><xsd:complexType
+ name="ListOfProductAttributeDomainTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfProductAttributeDomain"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal10:ListOfProductAttributeDomain"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductAttributeDomain"
+><xsd:sequence
+><xsd:element
+ name="ProductAttribute"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal10:ProductAttribute"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ProductAttribute"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AttributeName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DefaultValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DomainType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="HiddenFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MaximumValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MinimumValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrigId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReadOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RequiredFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VectorFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IncrementValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NoneValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParametricSearchFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AttributeDefinitionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AttributeVersionNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OverwrittenFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InheritedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityProcedureName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ValidationSpec"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePickCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EnumeratedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AttributeLOVValue"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal10:AttributeLOVValue"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="AttributeLOVValue"
+><xsd:sequence
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ xmlns:xsdLocal16="http://siebel.com/OrderManagement/Catalog/Data/UDSPublishCatalog/Data"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/UDSPublishCatalog/Data"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfUDSPublishCatalog"
+ type="xsdLocal16:ListOfUDSPublishCatalogData"
+></xsd:element
+><xsd:complexType
+ name="ListOfUDSPublishCatalogTopElmtData"
+><xsd:sequence
+><xsd:element
+ name="ListOfUDSPublishCatalog"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal16:ListOfUDSPublishCatalogData"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfUDSPublishCatalogData"
+><xsd:sequence
+><xsd:element
+ name="Catalog"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:CatalogData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CatalogData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Active"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Version"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal16:ListOfCategoryData"
+></xsd:element
+><xsd:element
+ name="ListOfCatalogTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal16:ListOfCatalogTranslationData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCategoryData"
+><xsd:sequence
+><xsd:element
+ name="Category"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:CategoryData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CategoryData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Count"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayTemplate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NoTrainingFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ResponseThreshold"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="RootCategoryFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Usage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal16:ListOfProductData"
+></xsd:element
+><xsd:element
+ name="ListOfCategoryTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal16:ListOfCategoryTranslationData"
+></xsd:element
+><xsd:element
+ name="Category"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:CategoryData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCatalogTranslationData"
+><xsd:sequence
+><xsd:element
+ name="CatalogTranslation"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:CatalogTranslationData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CatalogTranslationData"
+><xsd:sequence
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LanguageName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductData"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:ProductData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ProductData"
+><xsd:sequence
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ParentId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="ImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ListOfProductAttribute"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal16:ListOfProductAttributeData"
+></xsd:element
+><xsd:element
+ name="ListOfNetPriceWaterfall"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal16:ListOfNetPriceWaterfallData"
+></xsd:element
+><xsd:element
+ name="ListOfProductTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal16:ListOfProductTranslationData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCategoryTranslationData"
+><xsd:sequence
+><xsd:element
+ name="CategoryTranslation"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:CategoryTranslationData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CategoryTranslationData"
+><xsd:sequence
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LanguageName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExtendedDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductAttributeData"
+><xsd:sequence
+><xsd:element
+ name="ProductAttribute"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:ProductAttributeData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ProductAttributeData"
+><xsd:sequence
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DefaultValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfNetPriceWaterfallData"
+><xsd:sequence
+><xsd:element
+ name="NetPriceWaterfall"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:NetPriceWaterfallData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="NetPriceWaterfallData"
+><xsd:sequence
+><xsd:element
+ name="Text"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Price"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AdjustmentType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AdjustmentAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductTranslationData"
+><xsd:sequence
+><xsd:element
+ name="ProductTranslation"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal16:ProductTranslationData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ProductTranslationData"
+><xsd:sequence
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LanguageName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/Category"
+ xmlns:xsdLocal12="http://siebel.com/OrderManagement/Catalog/Data/Category"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfCatalog"
+ type="xsdLocal12:ListOfCatalog"
+></xsd:element
+><xsd:complexType
+ name="ListOfCatalogTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfCatalog"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal12:ListOfCatalog"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCatalog"
+><xsd:sequence
+><xsd:element
+ name="Catalog"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal12:Catalog"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Catalog"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Active"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Version"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal12:ListOfCategory"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCategory"
+><xsd:sequence
+><xsd:element
+ name="Category"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal12:Category"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Category"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Count"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayTemplate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NoTrainingFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ResponseThreshold"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Usage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Category"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal12:Category"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/CatalogContext"
+ xmlns:xsdLocal3="http://siebel.com/OrderManagement/Catalog/Data/CatalogContext"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfContext"
+ type="xsdLocal3:ListOfContext"
+></xsd:element
+><xsd:complexType
+ name="ListOfContextTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfContext"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal3:ListOfContext"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContext"
+><xsd:sequence
+><xsd:element
+ name="Context"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:Context"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Context"
+><xsd:sequence
+><xsd:element
+ name="ExternalContext"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ExternalContext"
+></xsd:element
+><xsd:element
+ name="SiebelContext"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:SiebelContext"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ExternalContext"
+><xsd:sequence
+><xsd:element
+ name="ABOFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountContractedProductsOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DiscountPercent"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityDisplayMode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="HeaderId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Mode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="City"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="State"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Country"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="SiebelContext"
+><xsd:sequence
+><xsd:element
+ name="BusObjName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BusCompName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SignalMode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContextRowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ xmlns:xsdLocal1="http://siebel.com/OrderManagement/Catalog/Data/SearchableProductClass"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/SearchableProductClass"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfSearchableProductClass"
+ type="xsdLocal1:ListOfSearchableProductClass"
+></xsd:element
+><xsd:complexType
+ name="ListOfSearchableProductClassTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfSearchableProductClass"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal1:ListOfSearchableProductClass"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfSearchableProductClass"
+><xsd:sequence
+><xsd:element
+ name="SearchableProductClass"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal1:SearchableProductClass"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="SearchableProductClass"
+><xsd:sequence
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/UDSPublishCatalog/Data"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/UDSPublishCatalog/Query"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/Catalog"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/PublishCatalog"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/Category"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/Categories"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/ProductAttributeDomain"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/ProductDetails"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/CategoryProduct"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/RelatedProducts"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/RelatedPromotions"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/Product"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/ProductChildren"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/CatalogContext"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/ProductClassAttributes"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Catalog/Data/SearchableProductClass"
+></xsd:import
+><xsd:element
+ name="GetSearchParameters_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="LookupFromCache"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MaximumAttributes"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal1:ListOfSearchableProductClass"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="NoAllOptionInLOVDomainValues"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FieldNameClassId"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetSearchParameters_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfProductClassAttributes"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetProductChildren_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="EligibilityMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfContext"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ContextMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PricingMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal4:ListOfProductChildren"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetProductChildren_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal4:ListOfProductChildren"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="ExecuteSearch_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="EligibilityMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductSearchSpec"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceSearchExpression"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfContext"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ContextMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal2:ListOfProductClassAttributes"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ResultSize"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PricingMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal5:ListOfProduct"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="SearchOption"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="ExecuteSearch_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal5:ListOfProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetRelatedPromotions_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="EligibilityMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfContext"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ContextMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PricingMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal6:ListOfProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetRelatedPromotions_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal6:ListOfProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetSearchOptions_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal1:ListOfSearchableProductClass"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetSearchOptions_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal1:ListOfSearchableProductClass"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetRelatedProducts_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="EligibilityMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfContext"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ContextMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PricingMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal7:ListOfProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetRelatedProducts_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal7:ListOfProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetCategoryProducts_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="EligibilityMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfContext"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ContextMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PricingMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal8:ListOfCategoryProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetCategoryProducts_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal8:ListOfCategoryProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetProductDetails_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="EligibilityMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfContext"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ContextMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PricingMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal9:ListOfProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetProductDetails_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal9:ListOfProduct"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetProductAttributeDomain_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="Product_spcConfiguration_spcModel_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Attribute_spcId"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetProductAttributeDomain_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal10:ListOfProductAttributeDomain"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetCategories_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal11:ListOfCategory"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetCategories_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal11:ListOfCategory"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetCatalogCategories_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal12:ListOfCatalog"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetCatalogCategories_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal12:ListOfCatalog"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="PublishCatalog_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="EligibilityMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfContext"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ContextMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PricingMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal13:ListOfPublishCatalog"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="IncludePriceWaterfall"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="PublishCatalog_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal13:ListOfPublishCatalog"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetCatalogs_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal14:ListOfCatalog"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="GetCatalogs_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal14:ListOfCatalog"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="CatalogQueryPage_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="EligibilityMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NamedSearchSpec"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal15:ListOfUDSPublishCatalog"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ContextMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal3:ListOfContext"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="PricingMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="CatalogQueryPage_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal16:ListOfUDSPublishCatalog"
+ minOccurs="0"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/Catalog"
+ xmlns:xsdLocal14="http://siebel.com/OrderManagement/Catalog/Data/Catalog"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfCatalog"
+ type="xsdLocal14:ListOfCatalog"
+></xsd:element
+><xsd:complexType
+ name="ListOfCatalogTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfCatalog"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal14:ListOfCatalog"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCatalog"
+><xsd:sequence
+><xsd:element
+ name="Catalog"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal14:Catalog"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Catalog"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Active"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Version"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/Product"
+ xmlns:xsdLocal5="http://siebel.com/OrderManagement/Catalog/Data/Product"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfProduct"
+ type="xsdLocal5:ListOfProduct"
+></xsd:element
+><xsd:complexType
+ name="ListOfProductTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfProduct"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal5:ListOfProduct"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProduct"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal5:Product"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Product"
+><xsd:sequence
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/ProductChildren"
+ xmlns:xsdLocal4="http://siebel.com/OrderManagement/Catalog/Data/ProductChildren"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfProductChildren"
+ type="xsdLocal4:ListOfProductChildren"
+></xsd:element
+><xsd:complexType
+ name="ListOfProductChildrenTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfProductChildren"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal4:ListOfProductChildren"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductChildren"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal4:Product"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Product"
+><xsd:sequence
+><xsd:element
+ name="ParentItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfKeyFeature"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal4:ListOfKeyFeature"
+></xsd:element
+><xsd:element
+ name="ListOfLiterature"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal4:ListOfLiterature"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfKeyFeature"
+><xsd:sequence
+><xsd:element
+ name="KeyFeature"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal4:KeyFeature"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="KeyFeature"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Feature"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Vendor"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfLiterature"
+><xsd:sequence
+><xsd:element
+ name="Literature"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal4:Literature"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Literature"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Internal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LitFileAutoUpdFlg"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LitFileDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LitFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LitFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LitFileSize"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SalesToolType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReleaseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExpirationDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="WebDisplay"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Synopsis"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/RelatedPromotions"
+ xmlns:xsdLocal6="http://siebel.com/OrderManagement/Catalog/Data/RelatedPromotions"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfProduct"
+ type="xsdLocal6:ListOfProduct"
+></xsd:element
+><xsd:complexType
+ name="ListOfProductTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfProduct"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal6:ListOfProduct"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProduct"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal6:Product"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Product"
+><xsd:sequence
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfRelatedPromotion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal6:ListOfRelatedPromotion"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfRelatedPromotion"
+><xsd:sequence
+><xsd:element
+ name="RelatedPromotion"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal6:RelatedPromotion"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="RelatedPromotion"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PromotionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PromotionInstanceFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfPromotionMessages"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal6:ListOfPromotionMessages"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfPromotionMessages"
+><xsd:sequence
+><xsd:element
+ name="PromotionMessages"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal6:PromotionMessages"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="PromotionMessages"
+><xsd:sequence
+><xsd:element
+ name="PromotionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LanguageName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Reason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ xmlns:xsdLocal15="http://siebel.com/OrderManagement/Catalog/Data/UDSPublishCatalog/Query"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/UDSPublishCatalog/Query"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfUDSPublishCatalog"
+ type="xsdLocal15:ListOfUDSPublishCatalogQuery"
+></xsd:element
+><xsd:complexType
+ name="ListOfUDSPublishCatalogTopElmtQuery"
+><xsd:sequence
+><xsd:element
+ name="ListOfUDSPublishCatalog"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ListOfUDSPublishCatalogQuery"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfUDSPublishCatalogQuery"
+><xsd:sequence
+><xsd:element
+ name="Catalog"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:CatalogQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CatalogQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Active"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="CatalogType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Version"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ListOfCategoryQuery"
+></xsd:element
+><xsd:element
+ name="ListOfCatalogTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ListOfCatalogTranslationQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCategoryQuery"
+><xsd:sequence
+><xsd:element
+ name="Category"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:CategoryQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CategoryQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="CatalogId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Count"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="DisplayTemplate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="NoTrainingFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ParentCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ParentCategoryName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ResponseThreshold"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="RootCategoryFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="RootCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Usage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ListOfProductQuery"
+></xsd:element
+><xsd:element
+ name="ListOfCategoryTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ListOfCategoryTranslationQuery"
+></xsd:element
+><xsd:element
+ name="Category"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:CategoryQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCatalogTranslationQuery"
+><xsd:sequence
+><xsd:element
+ name="CatalogTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:CatalogTranslationQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CatalogTranslationQuery"
+><xsd:sequence
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="LanguageName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="CatalogId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductQuery"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ProductQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ProductQuery"
+><xsd:sequence
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ParentId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfProductAttribute"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ListOfProductAttributeQuery"
+></xsd:element
+><xsd:element
+ name="ListOfNetPriceWaterfall"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ListOfNetPriceWaterfallQuery"
+></xsd:element
+><xsd:element
+ name="ListOfProductTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ListOfProductTranslationQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCategoryTranslationQuery"
+><xsd:sequence
+><xsd:element
+ name="CategoryTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:CategoryTranslationQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="CategoryTranslationQuery"
+><xsd:sequence
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="LanguageName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="CategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ExtendedDescription"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductAttributeQuery"
+><xsd:sequence
+><xsd:element
+ name="ProductAttribute"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ProductAttributeQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ProductAttributeQuery"
+><xsd:sequence
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="DefaultValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfNetPriceWaterfallQuery"
+><xsd:sequence
+><xsd:element
+ name="NetPriceWaterfall"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:NetPriceWaterfallQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="NetPriceWaterfallQuery"
+><xsd:sequence
+><xsd:element
+ name="Text"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="Price"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="AdjustmentType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="AdjustmentAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductTranslationQuery"
+><xsd:sequence
+><xsd:element
+ name="ProductTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:ProductTranslationQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ProductTranslationQuery"
+><xsd:sequence
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="LanguageName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal15:queryType"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="queryType"
+><xsd:simpleContent
+><xsd:extension
+ base="xsd:string"
+><xsd:attribute
+ name="sortorder"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="sortsequence"
+ type="xsd:string"
+></xsd:attribute
+></xsd:extension
+></xsd:simpleContent
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ xmlns:xsdLocal8="http://siebel.com/OrderManagement/Catalog/Data/CategoryProduct"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/CategoryProduct"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfCategoryProduct"
+ type="xsdLocal8:ListOfCategoryProduct"
+></xsd:element
+><xsd:complexType
+ name="ListOfCategoryProductTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfCategoryProduct"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal8:ListOfCategoryProduct"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfCategoryProduct"
+><xsd:sequence
+><xsd:element
+ name="CatalogCategory"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal8:CatalogCategory"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="CatalogCategory"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogEffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogEffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CatalogName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayTemplate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NoTrainingFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentCategoryName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrivateFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ResponseThreshold"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Usage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Count"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal8:ListOfProduct"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProduct"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal8:Product"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Product"
+><xsd:sequence
+><xsd:element
+ name="ParentItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SequenceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ xmlns:xsdLocal9="http://siebel.com/OrderManagement/Catalog/Data/ProductDetails"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/ProductDetails"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfProduct"
+ type="xsdLocal9:ListOfProduct"
+></xsd:element
+><xsd:complexType
+ name="ListOfProductTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfProduct"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal9:ListOfProduct"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProduct"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal9:Product"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Product"
+><xsd:sequence
+><xsd:element
+ name="ParentItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileExt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ThumbnImageFileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Active"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingServiceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSTaxCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganizationName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TSProductSubCategory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductAttribute"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal9:ProductAttribute"
+></xsd:element
+><xsd:element
+ name="ListOfProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal9:ListOfProductLine"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ProductAttribute"
+><xsd:sequence
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DefaultValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReadOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RequiredFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EnumeratedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductLine"
+><xsd:sequence
+><xsd:element
+ name="ProductLine"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal9:ProductLine"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ProductLine"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/RelatedProducts"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsdLocal7="http://siebel.com/OrderManagement/Catalog/Data/RelatedProducts"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfProduct"
+ type="xsdLocal7:ListOfProduct"
+></xsd:element
+><xsd:complexType
+ name="ListOfProductTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfProduct"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal7:ListOfProduct"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProduct"
+><xsd:sequence
+><xsd:element
+ name="Product"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal7:Product"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="Product"
+><xsd:sequence
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfRelatedProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal7:ListOfRelatedProduct"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfRelatedProduct"
+><xsd:sequence
+><xsd:element
+ name="RelatedProduct"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal7:RelatedProduct"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="RelatedProduct"
+><xsd:sequence
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePick"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListPriceTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Orderable"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Part"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReferencePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductRelationType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Catalog/Data/ProductClassAttributes"
+ xmlns:xsdLocal2="http://siebel.com/OrderManagement/Catalog/Data/ProductClassAttributes"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfProductClassAttributes"
+ type="xsdLocal2:ListOfProductClassAttributes"
+></xsd:element
+><xsd:complexType
+ name="ListOfProductClassAttributesTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfProductClassAttributes"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal2:ListOfProductClassAttributes"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfProductClassAttributes"
+><xsd:sequence
+><xsd:element
+ name="SearchableProductClass"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:SearchableProductClass"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="SearchableProductClass"
+><xsd:sequence
+><xsd:element
+ name="ClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductClassAttributes"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ProductClassAttributes"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ProductClassAttributes"
+><xsd:sequence
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AttributeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LOVValue"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:LOVValue"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="LOVValue"
+><xsd:sequence
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+></types
+><message
+ name="GetSearchParameters_Input"
+><part
+ name="GetSearchParameters_Input"
+ element="tns:GetSearchParameters_Input"
+></part
+></message
+><message
+ name="GetSearchParameters_Output"
+><part
+ name="GetSearchParameters_Output"
+ element="tns:GetSearchParameters_Output"
+></part
+></message
+><message
+ name="GetProductChildren_Input"
+><part
+ name="GetProductChildren_Input"
+ element="tns:GetProductChildren_Input"
+></part
+></message
+><message
+ name="GetProductChildren_Output"
+><part
+ name="GetProductChildren_Output"
+ element="tns:GetProductChildren_Output"
+></part
+></message
+><message
+ name="ExecuteSearch_Input"
+><part
+ name="ExecuteSearch_Input"
+ element="tns:ExecuteSearch_Input"
+></part
+></message
+><message
+ name="ExecuteSearch_Output"
+><part
+ name="ExecuteSearch_Output"
+ element="tns:ExecuteSearch_Output"
+></part
+></message
+><message
+ name="GetRelatedPromotions_Input"
+><part
+ name="GetRelatedPromotions_Input"
+ element="tns:GetRelatedPromotions_Input"
+></part
+></message
+><message
+ name="GetRelatedPromotions_Output"
+><part
+ name="GetRelatedPromotions_Output"
+ element="tns:GetRelatedPromotions_Output"
+></part
+></message
+><message
+ name="GetSearchOptions_Input"
+><part
+ name="GetSearchOptions_Input"
+ element="tns:GetSearchOptions_Input"
+></part
+></message
+><message
+ name="GetSearchOptions_Output"
+><part
+ name="GetSearchOptions_Output"
+ element="tns:GetSearchOptions_Output"
+></part
+></message
+><message
+ name="GetRelatedProducts_Input"
+><part
+ name="GetRelatedProducts_Input"
+ element="tns:GetRelatedProducts_Input"
+></part
+></message
+><message
+ name="GetRelatedProducts_Output"
+><part
+ name="GetRelatedProducts_Output"
+ element="tns:GetRelatedProducts_Output"
+></part
+></message
+><message
+ name="GetCategoryProducts_Input"
+><part
+ name="GetCategoryProducts_Input"
+ element="tns:GetCategoryProducts_Input"
+></part
+></message
+><message
+ name="GetCategoryProducts_Output"
+><part
+ name="GetCategoryProducts_Output"
+ element="tns:GetCategoryProducts_Output"
+></part
+></message
+><message
+ name="GetProductDetails_Input"
+><part
+ name="GetProductDetails_Input"
+ element="tns:GetProductDetails_Input"
+></part
+></message
+><message
+ name="GetProductDetails_Output"
+><part
+ name="GetProductDetails_Output"
+ element="tns:GetProductDetails_Output"
+></part
+></message
+><message
+ name="GetProductAttributeDomain_Input"
+><part
+ name="GetProductAttributeDomain_Input"
+ element="tns:GetProductAttributeDomain_Input"
+></part
+></message
+><message
+ name="GetProductAttributeDomain_Output"
+><part
+ name="GetProductAttributeDomain_Output"
+ element="tns:GetProductAttributeDomain_Output"
+></part
+></message
+><message
+ name="GetCategories_Input"
+><part
+ name="GetCategories_Input"
+ element="tns:GetCategories_Input"
+></part
+></message
+><message
+ name="GetCategories_Output"
+><part
+ name="GetCategories_Output"
+ element="tns:GetCategories_Output"
+></part
+></message
+><message
+ name="GetCatalogCategories_Input"
+><part
+ name="GetCatalogCategories_Input"
+ element="tns:GetCatalogCategories_Input"
+></part
+></message
+><message
+ name="GetCatalogCategories_Output"
+><part
+ name="GetCatalogCategories_Output"
+ element="tns:GetCatalogCategories_Output"
+></part
+></message
+><message
+ name="PublishCatalog_Input"
+><part
+ name="PublishCatalog_Input"
+ element="tns:PublishCatalog_Input"
+></part
+></message
+><message
+ name="PublishCatalog_Output"
+><part
+ name="PublishCatalog_Output"
+ element="tns:PublishCatalog_Output"
+></part
+></message
+><message
+ name="GetCatalogs_Input"
+><part
+ name="GetCatalogs_Input"
+ element="tns:GetCatalogs_Input"
+></part
+></message
+><message
+ name="GetCatalogs_Output"
+><part
+ name="GetCatalogs_Output"
+ element="tns:GetCatalogs_Output"
+></part
+></message
+><message
+ name="CatalogQueryPage_Input"
+><part
+ name="CatalogQueryPage_Input"
+ element="tns:CatalogQueryPage_Input"
+></part
+></message
+><message
+ name="CatalogQueryPage_Output"
+><part
+ name="CatalogQueryPage_Output"
+ element="tns:CatalogQueryPage_Output"
+></part
+></message
+><portType
+ name="CatalogPort"
+><operation
+ name="GetSearchParameters"
+><input
+ message="tns:GetSearchParameters_Input"
+></input
+><output
+ message="tns:GetSearchParameters_Output"
+></output
+></operation
+><operation
+ name="GetProductChildren"
+><input
+ message="tns:GetProductChildren_Input"
+></input
+><output
+ message="tns:GetProductChildren_Output"
+></output
+></operation
+><operation
+ name="ExecuteSearch"
+><input
+ message="tns:ExecuteSearch_Input"
+></input
+><output
+ message="tns:ExecuteSearch_Output"
+></output
+></operation
+><operation
+ name="GetRelatedPromotions"
+><input
+ message="tns:GetRelatedPromotions_Input"
+></input
+><output
+ message="tns:GetRelatedPromotions_Output"
+></output
+></operation
+><operation
+ name="GetSearchOptions"
+><input
+ message="tns:GetSearchOptions_Input"
+></input
+><output
+ message="tns:GetSearchOptions_Output"
+></output
+></operation
+><operation
+ name="GetRelatedProducts"
+><input
+ message="tns:GetRelatedProducts_Input"
+></input
+><output
+ message="tns:GetRelatedProducts_Output"
+></output
+></operation
+><operation
+ name="GetCategoryProducts"
+><input
+ message="tns:GetCategoryProducts_Input"
+></input
+><output
+ message="tns:GetCategoryProducts_Output"
+></output
+></operation
+><operation
+ name="GetProductDetails"
+><input
+ message="tns:GetProductDetails_Input"
+></input
+><output
+ message="tns:GetProductDetails_Output"
+></output
+></operation
+><operation
+ name="GetProductAttributeDomain"
+><input
+ message="tns:GetProductAttributeDomain_Input"
+></input
+><output
+ message="tns:GetProductAttributeDomain_Output"
+></output
+></operation
+><operation
+ name="GetCategories"
+><input
+ message="tns:GetCategories_Input"
+></input
+><output
+ message="tns:GetCategories_Output"
+></output
+></operation
+><operation
+ name="GetCatalogCategories"
+><input
+ message="tns:GetCatalogCategories_Input"
+></input
+><output
+ message="tns:GetCatalogCategories_Output"
+></output
+></operation
+><operation
+ name="PublishCatalog"
+><input
+ message="tns:PublishCatalog_Input"
+></input
+><output
+ message="tns:PublishCatalog_Output"
+></output
+></operation
+><operation
+ name="GetCatalogs"
+><input
+ message="tns:GetCatalogs_Input"
+></input
+><output
+ message="tns:GetCatalogs_Output"
+></output
+></operation
+></portType
+><portType
+ name="CatalogUDSPort"
+><operation
+ name="CatalogQueryPage"
+><input
+ message="tns:CatalogQueryPage_Input"
+></input
+><output
+ message="tns:CatalogQueryPage_Output"
+></output
+></operation
+></portType
+><binding
+ name="CatalogPort"
+ type="tns:CatalogPort"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="GetSearchParameters"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetSearchParameters"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetProductChildren"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetProductChildren"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="ExecuteSearch"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:ExecuteSearch"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetRelatedPromotions"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetRelatedPromotions"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetSearchOptions"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetSearchOptions"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetRelatedProducts"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetRelatedProducts"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetCategoryProducts"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetCategoryProducts"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetProductDetails"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetProductDetails"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetProductAttributeDomain"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetProductAttributeDomain"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetCategories"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetCategories"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetCatalogCategories"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetCatalogCategories"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="PublishCatalog"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:PublishCatalog"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="GetCatalogs"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:GetCatalogs"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><binding
+ name="CatalogUDSPort"
+ type="tns:CatalogUDSPort"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="CatalogQueryPage"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Catalog:CatalogQueryPage"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="CatalogWebService"
+><port
+ binding="tns:CatalogPort"
+ name="CatalogPort"
+><soap:address
+ location="http://tr009bucrm.ddc.teliasonera.net:8080/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"
+></soap:address
+></port
+><port
+ binding="tns:CatalogUDSPort"
+ name="CatalogUDSPort"
+><soap:address
+ location="http://tr009bucrm.ddc.teliasonera.net:8080/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"
+></soap:address
+></port
+></service
+></definitions
+>

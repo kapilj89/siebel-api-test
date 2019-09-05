@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>se.telia.siebel</groupId>
+    <artifactId>siebel-api-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>siebel-api-test</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <cxf.version>3.2.7</cxf.version>
+        <build-helper-plugin.version>3.0.0</build-helper-plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java8</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.2.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>3.16.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <version>${cxf.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <configuration>
+                            <sourceRoot>${project.build.directory}/generated-test-sources/cxf</sourceRoot>
+                            <wsdlOptions>
+                                <!-- WSDL-files in alphabetical order -->
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/ABOWebService_v3.4.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/AssetManagementComplex_v2.1.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/CatalogWebService_v1.5.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/OrderWebService_v2.7.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/ProductConfigurator_v2.8.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/PromotionWebService_v3.1.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/QuoteCheckOutWebService_v1.6.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/QuoteWebService_v3.0.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/QuoteAddItemsWS_v2.6.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/QuotingWebService_v2.9.WSDL</wsdl><!-- Seems like the WSDL on Concfluence is incorrect, this one is--></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/SelfServiceAccount_v1.6.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/SelfServiceAddress_v1.6.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/SelfServiceUser_v1.4.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/SWICancel_Sales_Order.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/TSC2BMoveOrderWebService_v1.2.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/TSC2BQueryCustomerService_v1.6.WSDL</wsdl></wsdlOption>
+                                <wsdlOption><wsdl>${basedir}/src/test/resources/wsdlfiles/TSChannelSISOMBillingSubmitOrderWebService_v2.2.WSDL</wsdl></wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>${build-helper-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>add-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${project.build.directory}/generated-test-sources/cxf</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <organization>
+    	<name>Capgemini TA</name>
+    </organization>
+</project>
