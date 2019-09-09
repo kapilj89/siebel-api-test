@@ -80,7 +80,7 @@ public class StepDefs implements En {
         And("^call SDU BBIPTV SynchronizeQuote to populate the AccessCode \"([^\"]*)\" on the quote line items for a SDU order$", (String accessType) -> {
             System.out.println("\nSynchronizeQuote for BroadBand+IPTV\n");
             Quote quote = dataStorage.getQuote();
-            String dueDate = SiebelDateFormat.getCETtime();
+            String dueDate = SiebelDateFormat.getCurentCETtime();
 
             List<QuoteItem> quoteItemList = SiebelFlattenDataStructures.getFlattenedQuoteItems(quote);
             quoteItemList.stream()

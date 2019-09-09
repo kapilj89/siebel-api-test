@@ -22,11 +22,11 @@ Feature: Sanity Test for(Primary&Secondary) SDU New BB+VOIP
       And call SDU BBVOIP SynchronizeQuote to populate the AccessCode "<AccessCode>" on the quote line items for a SDU order
       And call QuoteCheckOutService and get ActiveOrderID
      Then call SubmitOrder Service and Get successful OrderID
-  
+  #
     Examples: 
       | CustomerType | SSN          | AddressData                                              | promotionCode | ServiceBundle | RelationShipName | Package | promotionCodeVOIP | ServiceBundleVOIP | AccessCode | 
-		  | B2C          | 199811012567 | BÅBERG;414;;TROLLHÄTTAN;VILLA;145863005;46191        | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1       | IA-Bredband 100/100-1703          | VoIP SE_Promo_Offer_1743             | VoIP SE Service bundle_1606     | 200        | 
-#		  | B2B          | 5565555009   | BÅBERG;250;;TROLLHÄTTAN;VILLA;150781154;46191    | P-BIA-OF-BB Start-1827    | Bredbandsaccesser        | Bredbandsaccesser alternativ | BIA-OF BredbandStart 100/100-1747 | VoIP SE_B2B_0Months_Promo_Offer_1649 | VoIP SE_B2B Service bundle_1649 | 200        | 
-      #| B2B          | 5565082756   | KÅLFJÄRILSVÄGEN;8;;TROLLHÄTTAN;VILLA;143882806;46165    | P-BIA-OF-BB Start-1827 | Bredbandsaccesser | Bredbandsaccesser alternativ | BIA-OF BredbandStart 100/100-1747 | VoIP SE_B2B_0Months_Promo_Offer_1649 | VoIP SE_B2B Service bundle_1649 | 200 | 
+#		  | B2C          | 195907011810 | SUNNANGRÄND;8;F;ALFTA;201;116503086;82230        | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1       | IA-Bredband 100/100-1703          | VoIP SE_Promo_Offer_1743             | VoIP SE Service bundle_1606     | 200        | 
+#		  | B2B          |  5565833273  | VÄSTRA CENTRALGATAN;14;B;EDSBYN;1103;120060931;82831     | P-BIA-OF-BB Start-1827    | Bredbandsaccesser        | Bredbandsaccesser alternativ | BIA-OF BredbandStart 100/100-1747 | VoIP SE_B2B_0Months_Promo_Offer_1649 | VoIP SE_B2B Service bundle_1649 | 200        | 
+      | B2B          | 5565115051   | SUNNANGRÄND;1;;ALFTA;1001;143493810;82230     | P-BIA-OF-BB Start-1827 | Bredbandsaccesser | Bredbandsaccesser alternativ | BIA-OF BredbandStart 100/100-1747 | VoIP SE_B2B_0Months_Promo_Offer_1649 | VoIP SE_B2B Service bundle_1649 | 200 | 
   
   

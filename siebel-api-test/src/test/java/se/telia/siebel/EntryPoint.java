@@ -32,11 +32,12 @@ public class EntryPoint {
         String SIT_UserName = ORUtil.getConfigValue("SIT_UserName");
         String SIT_Password = ORUtil.getConfigValue("SIT_Password");
         String EndPoint_URL_AT = ORUtil.getConfigValue("AT_EndURL");
+        String EndPoint_URL_ST = ORUtil.getConfigValue("ST_EndURL");
         String EndPoint_URL_SIT = ORUtil.getConfigValue("SIT_EndURL");
         String Environment = ORUtil.getConfigValue("Environment");
 
         String channel= (System.getProperty("channel") == null)  ? "TELIASE" : System.getProperty("channel");
-		if (Environment.equalsIgnoreCase("SIT")) {
+		if (Environment.equals("SIT")) {
 			username = (System.getProperty("username") == null) ? SIT_UserName
 					: System.getProperty("username");
 			password = (System.getProperty("password") == null) ? SIT_Password
@@ -45,12 +46,17 @@ public class EntryPoint {
 					: System.getProperty("siebelEndpointURL");
 
 		}
-		if (Environment.equalsIgnoreCase("AT")) {
+		if (Environment.equals("AT")) {
          username= (System.getProperty("username") == null)  ? AT_UserName : System.getProperty("username");
          password= (System.getProperty("password") == null)  ? AT_Password : System.getProperty("password");
          siebelEndpointURL= (System.getProperty("siebelEndpointURL") == null)  ? EndPoint_URL_AT : System.getProperty("siebelEndpointURL");
 		}
-		
+		if (Environment.equals("ST")) {
+	         username= (System.getProperty("username") == null)  ? AT_UserName : System.getProperty("username");
+	         password= (System.getProperty("password") == null)  ? AT_Password : System.getProperty("password");
+	         siebelEndpointURL= (System.getProperty("siebelEndpointURL") == null)  ? EndPoint_URL_ST : System.getProperty("siebelEndpointURL");
+			}
+			
         dataStorage.setSiebelEndpointURL(siebelEndpointURL);
         dataStorage.setLoginName(username);
         Credentials credentials = new Credentials(channel,username,password);

@@ -81,9 +81,8 @@ public class QuerySelfServiceAddressQueryPage {
                 UpdateNewAddress(AddressMap,CopperMaxValues);
 //                associateMoveInAddress();
             } else if(cutAddressData.getId().equalsIgnoreCase(dataStorage.getServiceAddressId())){
-//            	AddExistingAddress(AddressMap);
-//              
-                    System.out.println("primary address id = cutAddressId");
+            	System.out.println("primary address id = cutAddressId");
+            	AddExistingAddress(AddressMap,CopperMaxValues);
                     
 //                    System.out.println("neither associateMoveInAddress nor CreateMoveInAddress is needed");
                 }else if(!cutAddressData.getId().equals(dataStorage.getServiceAddressId())){

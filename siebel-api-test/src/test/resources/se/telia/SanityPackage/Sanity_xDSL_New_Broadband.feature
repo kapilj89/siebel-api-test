@@ -20,6 +20,6 @@ Feature: Sanity Test for (Secondary) SDU New BB ONLY
   #
     Examples: 
       | CustomerType | SSN          | AddressData                                    | promotionCode            | ServiceBundle            | RelationShipName             | Package                             | AccessCode | FbNumber   | 
-      | B2B          | 199902068510    | GURESGRÄND;1;C;YSTAD;VILLA;113021008;27146 | P-IA-xDSL-Broadband-1711 | Service Bundle-IA-1703-1   | OptGrp-IA-speed-1703-1 | IA-Bredband 10-1722 | 100        | FB26098460 | 
+      | B2B          | 199811047431    |KULLAGRUNDSGATAN;4;B;MALMÖ;173-070-01;112918468;21216 | P-IA-xDSL-Broadband-1711 | Service Bundle-IA-1703-1   | OptGrp-IA-speed-1703-1 | IA-Bredband 10-1722 | 100        | FB26098458 | 
   
   

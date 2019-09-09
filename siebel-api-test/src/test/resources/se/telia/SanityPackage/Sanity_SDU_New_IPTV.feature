@@ -8,7 +8,7 @@ Feature: Sanity Test for(secondary) SDU New IPTV
   
      When call SelfServiceUser to get primary organization id which is used in quote creation
       And call QueryCustomer using SSN "<SSN>" to get account and billing details
-      And call AddServiceAdress format StreetName,StreetNumber,Entrance,City,Apartnumber,PointID;Postalcode "<AddressData>"    
+     	And call AddressAddorupdate with format StreetName,StreetNumber,Entrance,City,Apartnumber,PointID;Postalcode "<AddressData>"    
       And call GetProductDetailsService using promotionCode "<promotionCodeIPTV>" and get ProductId, PriceList
       And call ApplyProductPromotionService and get quote
       And call ExecuteQuoting to commit the virtual quote in Siebel and get updated quote
@@ -21,7 +21,7 @@ Feature: Sanity Test for(secondary) SDU New IPTV
   
    Examples: 
       | CustomerType | SSN          | AddressData                                    |  promotionCodeIPTV       | RelationShipTV               | PackageTV     | AccessCode | 
-      | B2C          | 196909256999 | MUNKHÄTTEGATAN;30;B;MALMÖ;1505;121961560;21456 |  P-TV-IPTV-PlayPlus-1711 | OptGrp-TV-TeliaPackages-1704 | TV-Lagom-1606 | 200        | 
+      | B2C          | 199811071571 | SUNNANGRÄND;1;A;ALFTA;1010;144302293;82230 |  P-TV-IPTV-PlayPlus-1711 | OptGrp-TV-TeliaPackages-1704 | TV-Lagom-1606 | 200        | 
   
   
     

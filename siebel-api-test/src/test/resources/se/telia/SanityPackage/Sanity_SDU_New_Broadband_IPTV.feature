@@ -23,11 +23,11 @@ Feature: Sanity Test for(Primary)SDU New BB and IPTV
    		And call SDU BBIPTV SynchronizeQuote to populate the AccessCode "<AccessCode>" on the quote line items for a SDU order
       And call QuoteCheckOutService and get ActiveOrderID
       Then call SubmitOrder Service and Get successful OrderID
-  
+  #
    Examples: 
       | CustomerType | SSN          | AddressData                                     | promotionCode             | ServiceBundle            | RelationShipName       | Package                  | promotionCodeIPTV       | RelationShipTV               | PackageTV     | AccessCode | 
-      | B2C          | 199810273988 | BÅBERG;410;;TROLLHÄTTAN;VILLA;150754261;46191  | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1 | IA-Bredband 100/100-1703 | P-TV-IPTV-PlayPlus-1711 | OptGrp-TV-TeliaPackages-1704 | TV-Lagom-1606 | 200        |
-      #| B2C          | 199810266586 | ÄLVÅSVÄGEN;;;TROLLHÄTTAN;VILLA;130397745;46170  | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1 | IA-Bredband 100/100-1703 | P-TV-IPTV-PlayPlus-1711 | OptGrp-TV-TeliaPackages-1704 | TV-Lagom-1606 | 200        | 
+      | B2C          | 199811074914 | BÅBERG;;;TROLLHÄTTAN;VILLA;150754264;78693    | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1 | IA-Bredband 100/100-1703 | P-TV-IPTV-PlayPlus-1711 | OptGrp-TV-TeliaPackages-1704 | TV-Lagom-1606 | 200        |
+      #| B2C         | 199811017640 | HATTMURKLEVÄGEN;9;;TROLLHÄTTAN;VILLA;130384179;46154| P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1 | IA-Bredband 100/100-1703 | P-TV-IPTV-PlayPlus-1711 | OptGrp-TV-TeliaPackages-1704 | TV-Lagom-1606 | 200        | 
   
   
     

@@ -3,7 +3,15 @@ package se.telia.siebel.apiquerys;
 import se.telia.siebel.data.DataStorage;
 
 import java.awt.List;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
+
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.siebel.selfservice.common.account.SelfServiceAccount;
 import com.siebel.selfservice.common.account.SelfServiceAccountExecuteInput;
@@ -35,12 +43,10 @@ public class QuerySelfServiceAccount {
       public ListOfSSAccountData getListOfSSAccountData() {
            ListOfSSAccountData listOfSSAccountData = new ListOfSSAccountData();
          listOfSSAccountData.getAccount().add(getAccountDet());
-//         listOfSSAccountData.getAccount().add(getAccountadd());
          return listOfSSAccountData;
       }
        
        public AccountData getAccountDet() {
-
          AccountData accountData = new AccountData();
          accountData.setOperation("skipnode");
          String id=dataStorage.getServiceAccountId();
@@ -50,40 +56,34 @@ public class QuerySelfServiceAccount {
          accountData.setListOfAccountBusinessAddress(AddressData);
          return accountData;
       }
-
-	public AccountBusinessAddressData getAccountaddressdata() {
-		AccountBusinessAddressData AccountBusinessAddressData = new AccountBusinessAddressData();
-		AccountBusinessAddressData.setIsPrimaryMVG("Y");
-		AccountBusinessAddressData.setOperation("update");
-		// AccountBusinessAddressData.
-		// AccountBusinessAddressData.setTSPointId("152983411");
-		// AccountBusinessAddressData.setId(dataStorage.getPrimaryAddressId());
-		AccountBusinessAddressData.setAddressId(dataStorage.getPrimaryAddressId());
-		// AccountBusinessAddressData.setTSPointId("152983411");
-		AccountBusinessAddressData.setTSHDBlockFlag(true);
-		AccountBusinessAddressData.setTSHDStream(2);
-		AccountBusinessAddressData.setTSSDStream(2);
-		AccountBusinessAddressData.setTSVDSLBlockFlag(true);
-		// AccountBusinessAddressData.setTSPointId("129997480");
-		// AccountBusinessAddressData.setTSStreetNumber("6");
-		// AccountBusinessAddressData.setStreetAddress("BÖLETVÄGEN");
-		// AccountBusinessAddressData.setCity("KÅLLERED");
-
-		// AccountBusinessAddressData.setTSEntrance("A");
-
-		return AccountBusinessAddressData;
-	}
+       public AccountBusinessAddressData getAccountaddressdata() {
+         AccountBusinessAddressData AccountBusinessAddressData=new AccountBusinessAddressData();
+         AccountBusinessAddressData.setIsPrimaryMVG("Y");
+           AccountBusinessAddressData.setOperation("update");
+           AccountBusinessAddressData.setId(dataStorage.getPrimaryAddressId());
+           DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+           Date date = null;
+           try {
+           	Calendar cl = Calendar.getInstance();
+//   			cl.add(Calendar.MINUTE,-21);
+   			String newtime =format.format(cl.getTime()); 
+               XMLGregorianCalendar xmlGregCal = DatatypeFactory.newInstance().newXMLGregorianCalendar(newtime);
+               AccountBusinessAddressData.setEndDate(xmlGregCal);
+           } catch (DatatypeConfigurationException e) {
+               e.printStackTrace();
+               throw new IllegalStateException("Move in date not parsed correctly");
+           }
+            return AccountBusinessAddressData;
+      }
 
 
-      public void SetUpdateCopperMaxforxDSL(){
+      public void AddEndDateInExistingAddress(){
             SelfServiceAccountExecuteInput SelfServiceAccountExecuteInput=new SelfServiceAccountExecuteInput();
             SelfServiceAccountExecuteInput.setExecutionMode("ForwardOnly");
             SelfServiceAccountExecuteInput.setLOVLanguageMode("LIC");
             SelfServiceAccountExecuteInput.setViewMode("All");
             SelfServiceAccountExecuteInput.setListOfSSAccount(getListOfSSAccountData()); 
             SelfServiceAccountExecuteOutput selfServiceAccountExecuteOutput = selfServiceAccountPort.selfServiceAccountExecute(SelfServiceAccountExecuteInput);
-
-             
        }
 }
 

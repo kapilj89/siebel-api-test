@@ -3,6 +3,8 @@ package se.telia.siebel.stepdefs;
 
 
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 import com.siebel.ordermanagement.configurator.cfginteractdata.DomainItem;
 import com.siebel.ordermanagement.configurator.cfginteractdata.Item;
 import com.siebel.ordermanagement.configurator.cfginteractdata.Relationship;
@@ -40,17 +42,20 @@ public class MoveStepDefs implements En {
 
 
         Given("^call QueryAsset using SSN \"([^\"]*)\" to get asset details AssetNumber and ServiceAccountId for promotionName \"([^\"]*)\"$", (String ssn, String promotionName) -> {
-            QueryAsset queryAsset = new QueryAsset(dataStorage);
+        	QueryAsset queryAsset = new QueryAsset(dataStorage);
             AssetMgmtAssetHeaderData assetMgmtAssetHeaderData = queryAsset.getAssetMgmtAssetHeaderData(ssn, promotionName);
             Assert.assertNotNull("assetMgmtAssetHeaderData is null after getAssetMgmtAssetHeaderData", assetMgmtAssetHeaderData);
             String assetNumber = assetMgmtAssetHeaderData.getAssetNumber();
             String serviceAccountId = assetMgmtAssetHeaderData.getServiceAccountId();
+            String ProductId=  assetMgmtAssetHeaderData.getProductId();
+            
             Assert.assertNotNull("AssetNumber is null", assetNumber);
             Assert.assertNotNull("ServiceAccountId is null", assetNumber);
             dataStorage.setAssetNumber(assetNumber);
             dataStorage.setServiceAccountId(serviceAccountId);
+            dataStorage.setProductId(ProductId);
             System.out.println("assetNumber=" + assetNumber);
-            System.out.println("serviceAccountId=" + serviceAccountId);
+            System.out.println("serviceAccountId=" + serviceAccountId);	
         });
 
         When("^call QueryCustomer using SSN \"([^\"]*)\" to get PrimaryAddressId$", (String ssn) -> {
@@ -146,16 +151,10 @@ public class MoveStepDefs implements En {
 								
 							}
 						}
-						
 					}
-					
-					
 //					String integrationId = "1-WJ67CX";
-
 //					String integrationId = ASSETINTID;
 					String integrationId = dataStorage.getIntegrationId();
-
-					
 					System.out.println("Add item int" + integrationId);
 					QueryUpdateConfiguration queryUpdateConfiguration = new QueryUpdateConfiguration(dataStorage);
 					Map<String, String> attributes = new HashMap<>();
