@@ -664,7 +664,7 @@ public class BBStepdef implements En {
             System.out.println("activeOrderId="+activeOrderId);
         });
         Then("^call SubmitOrder Service and Get successful OrderID", () -> {
-            System.out.println("\nSubmitOrder\n");
+            System.out.println("\nSubmitOrder-API\n");
             QueryTSChannelSISOMBillingSubmitOrder queryTSChannelSISOMBillingSubmitOrder = new QueryTSChannelSISOMBillingSubmitOrder(dataStorage);
             String objectSpcId = queryTSChannelSISOMBillingSubmitOrder.submitOrder(dataStorage.getActiveOrderId());
             System.out.println("objectSpcId (the order id which is the same as the actibeOrderId, and that is returned from the submit order api) ="+objectSpcId);
