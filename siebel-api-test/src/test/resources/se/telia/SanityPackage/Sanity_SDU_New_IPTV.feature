@@ -21,7 +21,7 @@ Feature: Sanity Test for(secondary) SDU New IPTV
   
    Examples: 
       | CustomerType | SSN          | AddressData                                    |  promotionCodeIPTV       | RelationShipTV               | PackageTV     | AccessCode | 
-      | B2C          | 199811071571 | SUNNANGRÄND;1;A;ALFTA;1010;144302293;82230 |  P-TV-IPTV-PlayPlus-1711 | OptGrp-TV-TeliaPackages-1704 | TV-Lagom-1606 | 200        | 
+      | B2C          | 199811107136 | SUNNANGRÄND;1;;ALFTA;1003;143493813;82230 |  P-TV-IPTV-PlayPlus-1711 | OptGrp-TV-TeliaPackages-1704 | TV-Lagom-1606 | 200        | 
   
   
     

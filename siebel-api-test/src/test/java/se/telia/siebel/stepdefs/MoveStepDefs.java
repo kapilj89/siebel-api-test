@@ -50,7 +50,7 @@ public class MoveStepDefs implements En {
             String ProductId=  assetMgmtAssetHeaderData.getProductId();
             
             Assert.assertNotNull("AssetNumber is null", assetNumber);
-            Assert.assertNotNull("ServiceAccountId is null", assetNumber);
+            Assert.assertNotNull("ServiceAccountId is null", serviceAccountId);
             dataStorage.setAssetNumber(assetNumber);
             dataStorage.setServiceAccountId(serviceAccountId);
             dataStorage.setProductId(ProductId);

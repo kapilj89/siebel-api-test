@@ -82,7 +82,7 @@ public class QuerySelfServiceAddressQueryPage {
 //                associateMoveInAddress();
             } else if(cutAddressData.getId().equalsIgnoreCase(dataStorage.getServiceAddressId())){
             	System.out.println("primary address id = cutAddressId");
-            	AddExistingAddress(AddressMap,CopperMaxValues);
+//            	AddExistingAddress(AddressMap,CopperMaxValues);
                     
 //                    System.out.println("neither associateMoveInAddress nor CreateMoveInAddress is needed");
                 }else if(!cutAddressData.getId().equals(dataStorage.getServiceAddressId())){

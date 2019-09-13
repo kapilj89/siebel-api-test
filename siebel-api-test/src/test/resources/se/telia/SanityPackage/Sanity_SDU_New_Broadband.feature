@@ -21,9 +21,9 @@ Feature: Sanity Test for (Secondary) SDU New BB ONLY
   
     Examples: 
       | CustomerType | SSN          | AddressData                                                    | promotionCode             | ServiceBundle            | RelationShipName             | Package                           | AccessCode |
-      #| B2C          | 193401124510   | ENGELBREKTSGATAN;27;B;YSTAD;VILLA;112838759;73232         | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1       | IA-Bredband 100/100-1703          | 200        | 
+      | B2C          | 193401124510   | LÅNGGATAN;44;B;ALFTA;FS1;144303160;82231         | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1       | IA-Bredband 100/100-1703          | 200        | 
       #| B2C          | 199810264714 | HASSELKULLEGATAN;98;;TROLLHÄTTAN;VILLA;130396989;46162         | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1       | IA-Bredband 100/100-1703          | 200        | 
-      | B2C          | 199811014654 | SUNNANGRÄND;3;B;ALFTA;201;116502968;82230         | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1       | IA-Bredband 100/100-1703          | 200        | 
-      #| B2B          | 5565603064   | SUNNANGRÄND;10;D;ALFTA;102;116502954;82230         | P-BIA-OF-BB Start-1827    | Bredbandsaccesser        | Bredbandsaccesser alternativ | BIA-OF BredbandStart 100/100-1747 | 200        | 
+      | B2C          | 199811062786 | LÅNGGATAN;71;;ALFTA;1001;147698327;82231          | P-IA-Fiber-Broadband-1743 | Service Bundle-IA-1703-1 | OptGrp-IA-speed-1703-1       | IA-Bredband 100/100-1703          | 200        | 
+      | B2B          | 5565504601   | LÅNGGATAN;73;A;ALFTA;1101;144722206;82231          | P-BIA-OF-BB Start-1827    | Bredbandsaccesser        | Bredbandsaccesser alternativ | BIA-OF BredbandStart 100/100-1747 | 200        | 
   #
   
