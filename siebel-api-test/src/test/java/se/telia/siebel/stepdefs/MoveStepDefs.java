@@ -93,7 +93,7 @@ public class MoveStepDefs implements En {
             String quoteNumber = getGeneratedQuoteNumber();
             System.out.println("quoteNumber="+quoteNumber);
             QueryMoveModifyAssetToQuote queryMoveModifyAssetToQuote = new QueryMoveModifyAssetToQuote(dataStorage);
-            queryMoveModifyAssetToQuote.moveModifyAssetToQuote(quoteNumber);
+            queryMoveModifyAssetToQuote.moveModifyAssetToQuote(quoteNumber,"");
 
         });
         When("^call ModifyAssetToQuote for the RelationshipName \"([^\"]*)\" and Package \"([^\"]*)\" to \"([^\"]*)\"", (String Productname,String ExistingSpeed,String ModifiedSpeed) -> {
