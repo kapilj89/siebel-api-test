@@ -324,7 +324,7 @@ public class BBStepdef implements En {
             
            String quoteNumber  = getGeneratedQuoteNumber();
             System.out.println("quoteNumber="+quoteNumber);
-            String dueDate = SiebelDateFormat.getCETtime();
+            String dueDate = SiebelDateFormat.getCurentCETtime();
             QueryApplyProductPromotion queryApplyProductPromotion = new QueryApplyProductPromotion(dataStorage);
             Quote quote = queryApplyProductPromotion.applyProductPromotion(dataStorage.getAccountDetails(),
                     quoteNumber,
