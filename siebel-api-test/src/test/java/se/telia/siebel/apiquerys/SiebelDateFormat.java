@@ -53,7 +53,7 @@ public class SiebelDateFormat {
     	SimpleDateFormat siebelDateFormat = new SimpleDateFormat(FORMAT);
          Calendar cl = Calendar.getInstance();
 			cl.setTime(today1);
-			cl.add(Calendar.MINUTE,20);
+			cl.add(Calendar.MINUTE,15);
 			String newtime = siebelDateFormat.format(cl.getTime());
 			System.out.println(newtime); 
 			return newtime;
