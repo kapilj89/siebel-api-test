@@ -25,7 +25,7 @@ Feature: Sanity Test for (Primary&Secondary) SDU New BB ONLY
       And call EndConfigurationService and get Quote
       And call BBVOIPIPTV xDSLSynchronizeQuote to populate the AccessCode "<AccessCode>" and ConnRef number "<FbNumber>" on the quote line items for a xDSL order
       And call QuoteCheckOutService and get ActiveOrderID
-      Then call SubmitOrder Service and Get successful OrderID
+      And call TSChannelSubmitOrder to submit the order
   
    Examples: 
       | CustomerType | SSN          | AddressData                                    | promotionCode            | ServiceBundle            | RelationShipName       | Package                  | promotionCodeIPTV       | RelationShipTV               | PackageTV     | promotionCodeVOIP        | ServiceBundleVOIP           | AccessCode     | FbNumber   | 

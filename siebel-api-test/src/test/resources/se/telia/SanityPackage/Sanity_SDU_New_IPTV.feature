@@ -8,7 +8,7 @@ Feature: Sanity Test for(secondary) SDU New IPTV
   
      When call SelfServiceUser to get primary organization id which is used in quote creation
       And call QueryCustomer using SSN "<SSN>" to get account and billing details
-     	And call AddressAddorupdate with format StreetName,StreetNumber,Entrance,City,Apartnumber,PointID;Postalcode "<AddressData>"    
+     	And call QuerySelfServiceAddress Add/Update format StreetName,StreetNumber,Entrance,City,Apartnumber,PointID;Postalcode "<AddressData>"    
       And call GetProductDetailsService using promotionCode "<promotionCodeIPTV>" and get ProductId, PriceList
       And call ApplyProductPromotionService and get quote
       And call ExecuteQuoting to commit the virtual quote in Siebel and get updated quote
@@ -17,7 +17,7 @@ Feature: Sanity Test for(secondary) SDU New IPTV
       And call EndConfigurationService and get Quote
    		And call SDU IPTV SynchronizeQuote to populate the AccessCode "<AccessCode>" on the quote line items for a SDU order
       And call QuoteCheckOutService and get ActiveOrderID
-      Then call SubmitOrder Service and Get successful OrderID
+      And call TSChannelSubmitOrder to submit the order
   
    Examples: 
       | CustomerType | SSN          | AddressData                                    |  promotionCodeIPTV       | RelationShipTV               | PackageTV     | AccessCode | 

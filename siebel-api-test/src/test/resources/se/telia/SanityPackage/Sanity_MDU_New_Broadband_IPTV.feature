@@ -6,22 +6,22 @@ Feature: Sanity Test for New MDU BroadBand IPTV VOIP order
 
      When call SelfServiceUser to get primary organization id which is used in quote creation
       And call QueryCustomer using SSN "<SSN>" to get account and billing details
-      And call AddressAddorupdate with format StreetName,StreetNumber,Entrance,City,Apartnumber,PointID;Postalcode "<AddressData>"
-      #And call GetProductDetailsService using promotionCode "<promotionCode>" and get ProductId, PriceList
-      #And call ApplyProductPromotionService and get quote
-      #And call ExecuteQuoting to commit the virtual quote in Siebel and get updated quote
-      #And call BeginConfigurationService using product item name "<ServiceBundle>"
-      #And call Addproduct to set RelationShipName "OptGrp-IA-speed-1703-1" and Package "IA-Bredband 100/100-1703"
-      #And call EndConfigurationService and get Quote
-      #And call GetProductDetailsService using promotionCode "<promotionCodeIPTV>" and get ProductId, PriceList
-   #		And call QuoteAddItems and get quote
-      #And call BeginConfigurationService using product item name "Service Bundle-TV-IPTV-1704"
-      #And call Addproduct to set RelationShipName "<RelationShipTV>" and Package "<PackageTV>"
-      #And call EndConfigurationService and get Quote
-      #And call BBIPTV SynchronizeQuote to populate the deliveryContract "<Agreement>" Revision "<RevisionNumber>" RowID "<RowID>" and AccessCode "<AccessCode>" on the quote line items for a MDU order
-      #And call QuoteCheckOutService and get ActiveOrderID
-      #Then call SubmitOrder Service and Get successful OrderID
-  #
+      And call QuerySelfServiceAddress Add/Update format StreetName,StreetNumber,Entrance,City,Apartnumber,PointID;Postalcode "<Address>”
+      And call GetProductDetailsService using promotionCode "<promotionCode>" and get ProductId, PriceList
+      And call ApplyProductPromotionService and get quote
+      And call ExecuteQuoting to commit the virtual quote in Siebel and get updated quote
+      And call BeginConfigurationService using product item name "<ServiceBundle>"
+      And call Addproduct to set RelationShipName "OptGrp-IA-speed-1703-1" and Package "IA-Bredband 100/100-1703"
+      And call EndConfigurationService and get Quote
+      And call GetProductDetailsService using promotionCode "<promotionCodeIPTV>" and get ProductId, PriceList
+   		And call QuoteAddItems and get quote
+      And call BeginConfigurationService using product item name "Service Bundle-TV-IPTV-1704"
+      And call Addproduct to set RelationShipName "<RelationShipTV>" and Package "<PackageTV>"
+      And call EndConfigurationService and get Quote
+      And call BBIPTV SynchronizeQuote to populate the deliveryContract "<Agreement>" Revision "<RevisionNumber>" RowID "<RowID>" and AccessCode "<AccessCode>" on the quote line items for a MDU order
+     	And call QuoteCheckOutService and get ActiveOrderID
+      And call TSChannelSubmitOrder to submit the order
+  
 
      Examples: 
       | CustomerType | SSN          | AddressData                                             | promotionCode             | ServiceBundle            | RelationShipName       | Package                  | promotionCodeIPTV       | RelationShipTV               | PackageTV     |  AccessCode | Agreement    |RevisionNumber|RowID 	        | 

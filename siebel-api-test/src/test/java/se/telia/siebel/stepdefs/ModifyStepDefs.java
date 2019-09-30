@@ -1,5 +1,16 @@
 package se.telia.siebel.stepdefs;
 
+import static se.telia.siebel.apiquerys.GenerateQuoteNumber.getGeneratedQuoteNumber;
+import static se.telia.siebel.apiquerys.SiebelFlattenDataStructures.getFlattenedQuoteItems;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.Assert;
+
 import com.siebel.ordermanagement.configurator.cfginteractdata.DomainItem;
 import com.siebel.ordermanagement.configurator.cfginteractdata.Item;
 import com.siebel.ordermanagement.configurator.cfginteractdata.ListOfData;
@@ -8,116 +19,73 @@ import com.siebel.ordermanagement.quote.data.ListOfQuoteItem;
 import com.siebel.ordermanagement.quote.data.Quote;
 import com.siebel.ordermanagement.quote.data.QuoteItem;
 import com.siebel.ordermanagement.quote.data.QuoteItemXA;
-import cucumber.api.java8.En;
-import org.junit.Assert;
-import se.telia.siebel.apiquerys.*;
-import se.telia.siebel.data.DataStorage;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import static se.telia.siebel.apiquerys.GenerateQuoteNumber.getGeneratedQuoteNumber;
-import static se.telia.siebel.apiquerys.SiebelFlattenDataStructures.getFlattenedQuoteItems;
 
-public class MoveStepDefs implements En {
+import cucumber.api.java8.En;
+import se.telia.siebel.apiquerys.QueryEndConfiguration;
+import se.telia.siebel.apiquerys.QueryModifyAssetToQuote;
+import se.telia.siebel.apiquerys.QueryProductConfigurator;
+import se.telia.siebel.apiquerys.QueryQuote;
+import se.telia.siebel.apiquerys.QueryUpdateConfiguration;
+import se.telia.siebel.data.DataStorage;
+
+
+public class ModifyStepDefs implements En {
 	DataStorage dataStorage;
-	public  Map<String, String> AssetHolder = new HashMap<>();
+//	final Map<String, String> AssetHolder = new HashMap<>();
 	final Map<String, ListOfData> StoreServiceBundle = new HashMap<>();
 	final Map<String, Quote> StoreQuote = new HashMap<>();
 	final Map<String, String> IntegrationID = new HashMap<>();
 
-	public MoveStepDefs(DataStorage dataStorage) {
-		System.out.println("SanityMoveStepDefs Constructor");
-		this.dataStorage = dataStorage; // dataStorage is injected and contains
-		// stuff that needs sharing between
-		// steps
-
-		And("^call QuerySelfServiceAccount to add end date$", () -> {
-			System.out.println("\nAddEndDate\n");
-			QuerySelfServiceAccount querySelfServiceAddress = new QuerySelfServiceAccount(dataStorage);
-			querySelfServiceAddress.AddEndDateInExistingAddress();
-		});
-
-		  When("^call QueryCustomer using SSN \"([^\"]*)\" to get PrimaryAddressId$", (String ssn) -> {
-	            QueryCustomer queryCustomer = new QueryCustomer(dataStorage) ;
-	            String primaryAddressId = queryCustomer.getPrimaryAddressId(ssn);
-	            System.out.println("primaryAddress="+primaryAddressId);
-	            Assert.assertNotNull(primaryAddressId);
-	            dataStorage.setPrimaryAddressId(primaryAddressId);
-	        });
-
-		When("^call MoveModifyAssetToQuote to create move quote using AssetNumber and ServiceAccountId$", () -> {
-			String quoteNumber = getGeneratedQuoteNumber();
-			System.out.println("quoteNumber=" + quoteNumber);
-			for (int i = 0; i < AssetHolder.size(); i++) {
-				String Asset = AssetHolder.get("AssetNumber" + i);
-				if (Asset == null) {
-					System.out.println("NO SUCH ASSET");
-				} else {
-					QueryMoveModifyAssetToQuote queryMoveModifyAssetToQuote = new QueryMoveModifyAssetToQuote(
-							dataStorage);
-					queryMoveModifyAssetToQuote.moveModifyAssetToQuote(quoteNumber, Asset);
-
-				}
-			}
-		});
-
+	public ModifyStepDefs(DataStorage dataStorage) {
 		
+		And("^call ModifyAssetToQuote for ServiceBundle \"([^\"]*)\" from Package \"([^\"]*)\" to \"([^\"]*)\"",
+				(String ServiceBundle, String ExistingSpeed, String ModifiedSpeed) -> {
+					System.out.println("ModifyAssetToQuote");
+					System.out.println("Size of Assets:"+dataStorage.getAssetHolder().size());
+					String quoteNumber = getGeneratedQuoteNumber();
+					System.out.println("quoteNumber=" + quoteNumber);
+					String[] Bundles = ServiceBundle.split(";");
+					String[] CurrentSpeed = ExistingSpeed.split(";");
+					String[] NewSpeed = ModifiedSpeed.split(";");
+//					AssetHolder=dataStorage.getAssetHolder();
+					for (int i = 0; i < dataStorage.getAssetHolder().size(); i++) {
+						System.out.println("Size of Assets:"+dataStorage.getAssetHolder().size());
+						for (i = 0; i < Bundles.length; i++) {
+							for (i = 0; i < CurrentSpeed.length; i++) {
+								for (i = 0; i < NewSpeed.length; i++) {
 
+									String Asset = dataStorage.getAssetHolder().get("AssetNumber" + i);
+									if (Asset == null) {
+										System.out.println("NO SUCH ASSET");
+									} else {
+
+										System.out.println(
+												"\nBaseSpeed " + CurrentSpeed[i] + "\n AddedSpeed " + NewSpeed[i]);
+										QueryModifyAssetToQuote queryModifyAssetToQuote = new QueryModifyAssetToQuote(
+												dataStorage);
+										queryModifyAssetToQuote.modifyAssetToQuote(quoteNumber, Asset, Bundles[i],
+												CurrentSpeed[i], NewSpeed[i]);
+										// dataStorage.getQuote();
+										StoreQuote.put("Quote" + i, dataStorage.getQuote());
+
+									}
+
+								}
+
+							}
+						}
+					}
+				});
 		
-
-		When("^call SynchronizeQuote for a Move order$", () -> {
-            Quote quote = dataStorage.getQuote();
-
-
-            ListOfQuoteItem listOfQuoteItem = quote.getListOfQuoteItem();
-            List<QuoteItem> quoteItemList = listOfQuoteItem.getQuoteItem();
-
-            quoteItemList.stream()
-                    .filter(quoteItem -> !"Penalty PS".equalsIgnoreCase(quoteItem.getFulfillmentItemCode()))
-                    .forEach(quoteItem -> {
-                    });
-
-            QueryQuote queryQuote = new QueryQuote(dataStorage);
-            queryQuote.updateQuote(quote);
-        }); 
-		
-		And("^check \"([^\"]*)\" and Move all exsiting Asset with help of product item name \"([^\"]*)\" RelationShipName \"([^\"]*)\" and Package \"([^\"]*)\" to \"([^\"]*)\"$",
-				(String flag, String ServiceBundle, String RelationshipName, String BasePackage, String NewPackage) -> {
-
-					if (flag.equalsIgnoreCase("N")) {
-
-						System.out.println("\nQueryQuote\n");
-						QueryQuote queryQuote = new QueryQuote(dataStorage);
-						List<Quote> quoteList = queryQuote.getQuoteById();
-						System.out.println("quote.size()=" + quoteList.size());
-						Assert.assertTrue("Wrong number of quotes in the list: " + quoteList.size(),
-								quoteList.size() == 1);
-						dataStorage.setQuote(quoteList.get(0));
-						System.out.println("The quote is now in the dataStorage. id=" + quoteList.get(0).getId());
-
-						System.out.println("\nSKIP PRODUCT CUSTOMIZE\n");
-
-					} else {
+		And("^Modify all exsiting Asset using product item name \"([^\"]*)\" RelationShipName \"([^\"]*)\" and Package \"([^\"]*)\" to \"([^\"]*)\"$",
+				(String ServiceBundle, String RelationshipName, String BasePackage, String NewPackage) -> {
+						
 						List<String> Products = new ArrayList<String>(Arrays.asList(ServiceBundle.split(";")));
 						List<String> Realtions = new ArrayList<String>(Arrays.asList(RelationshipName.split(";")));
 						List<String> ExsitingSpeed = new ArrayList<String>(Arrays.asList(BasePackage.split(";")));
 						List<String> NewSpeed = new ArrayList<String>(Arrays.asList(NewPackage.split(";")));
 
 						for (int i = 0; i < Products.size(); i++) {
-
-							System.out.println("\nQueryQuote\n");
-							QueryQuote queryQuote = new QueryQuote(dataStorage);
-							List<Quote> quoteList = queryQuote.getQuoteById();
-							System.out.println("quote.size()=" + quoteList.size());
-							Assert.assertTrue("Wrong number of quotes in the list: " + quoteList.size(),
-									quoteList.size() == 1);
-							dataStorage.setQuote(quoteList.get(0));
-							StoreQuote.put("Quote" + i, dataStorage.getQuote());
-							System.out.println("The quote is now in the dataStorage. id=" + quoteList.get(0).getId());
-							// end Query Config
-
 							System.out.println("BundleName: " + Products.get(i));
 							String relationshipName = Realtions.get(i);
 							System.out.println("RelationshipName: " + relationshipName);
@@ -208,8 +176,22 @@ public class MoveStepDefs implements En {
 							}
 							dataStorage.setQuote(quote);
 						}
-					}
-
 				});
+		
+		When("^call SynchronizeQuote for a Modify order$", () -> {
+            Quote quote = dataStorage.getQuote();
+
+
+            ListOfQuoteItem listOfQuoteItem = quote.getListOfQuoteItem();
+            List<QuoteItem> quoteItemList = listOfQuoteItem.getQuoteItem();
+
+            quoteItemList.stream()
+                    .filter(quoteItem -> !"Penalty PS".equalsIgnoreCase(quoteItem.getFulfillmentItemCode()))
+                    .forEach(quoteItem -> {
+                    });
+
+            QueryQuote queryQuote = new QueryQuote(dataStorage);
+            queryQuote.updateQuote(quote);
+        }); 
 	}
 }

@@ -57,7 +57,8 @@ public class QueryProductConfigurator {
         beginConfigurationInput.setReturnFullInstance(RETURN_FULL_INSTANCE);
         beginConfigurationInput.setSkipCfgEligibilityCheck(SKIP_CFG_ELIGIBILITY_CHECK);
         beginConfigurationInput.setRootId(rootId); 
-        beginConfigurationInput.setHeaderId(quote.getId()); 
+//        beginConfigurationInput.setHeaderId(quote.getId());
+        beginConfigurationInput.setHeaderId(dataStorage.getActiveQuoteId()); 
         beginConfigurationInput.setListOfLinkedItems(new ListOfLinkedItems());
         beginConfigurationInput.setListOfProperties(new ListOfProperties());
         beginConfigurationInput.setListOfQuote(new ListOfQuote());

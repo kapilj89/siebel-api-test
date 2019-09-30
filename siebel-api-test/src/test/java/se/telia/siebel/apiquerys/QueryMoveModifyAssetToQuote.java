@@ -6,11 +6,12 @@ import com.siebel.customui.TSC2BMoveOrderWebService;
 import com.siebel.customui.TSC2BMoveOrderWebService_Service;
 import org.junit.Assert;
 import se.telia.siebel.data.DataStorage;
-import se.telia.siebel.stepdefs.Sanity_MoveStepDefs;
+import se.telia.siebel.stepdefs.CommonStepDefs;
+
 
 public class QueryMoveModifyAssetToQuote {
 	DataStorage dataStorage;
-	Sanity_MoveStepDefs sanity_MoveStepDefs;
+	CommonStepDefs MoveStepDefs;
 
 	TSC2BMoveOrderWebService_Service tsc2BMoveOrderWebService_service;
 	TSC2BMoveOrderWebService tsc2BMoveOrderWebService;
