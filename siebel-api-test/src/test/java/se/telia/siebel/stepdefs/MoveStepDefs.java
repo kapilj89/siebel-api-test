@@ -50,8 +50,9 @@ public class MoveStepDefs implements En {
 		When("^call MoveModifyAssetToQuote to create move quote using AssetNumber and ServiceAccountId$", () -> {
 			String quoteNumber = getGeneratedQuoteNumber();
 			System.out.println("quoteNumber=" + quoteNumber);
-			for (int i = 0; i < AssetHolder.size(); i++) {
-				String Asset = AssetHolder.get("AssetNumber" + i);
+            System.out.println("AssetHolder Size :"+ dataStorage.getAssetHolder().size());
+			for (int i = 0; i < dataStorage.getAssetHolder().size(); i++) {
+				String Asset = dataStorage.getAssetHolder().get("AssetNumber" + i);
 				if (Asset == null) {
 					System.out.println("NO SUCH ASSET");
 				} else {
@@ -87,7 +88,6 @@ public class MoveStepDefs implements En {
 				(String flag, String ServiceBundle, String RelationshipName, String BasePackage, String NewPackage) -> {
 
 					if (flag.equalsIgnoreCase("N")) {
-
 						System.out.println("\nQueryQuote\n");
 						QueryQuote queryQuote = new QueryQuote(dataStorage);
 						List<Quote> quoteList = queryQuote.getQuoteById();
