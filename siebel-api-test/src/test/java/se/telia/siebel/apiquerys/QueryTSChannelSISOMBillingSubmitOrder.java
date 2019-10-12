@@ -35,6 +35,7 @@ public class QueryTSChannelSISOMBillingSubmitOrder {
                     tsChannelSubmitOrderOutput.getErrorSpcMessage());
             return null;
         }
+		System.out.println("\n***OREDER PLACED SUCCESSFULLY*** \nORDER ID : "+tsChannelSubmitOrderOutput.getOrderNumber());  
 
         return objectSpcId; // This is the order id, the same as the input variable activeOrderId.
     }
