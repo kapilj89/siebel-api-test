@@ -1,8 +1,7 @@
-@SanityMobile 
+@SanityMobileBaseMobileVoice 
 
 Feature: API Mobile Sanity Test 
 
-  @tag1
   Scenario Outline: Create base order with mobile voice 
    
       When call SelfServiceUser to get primary organization id which is used in quote creation
@@ -18,10 +17,15 @@ Feature: API Mobile Sanity Test
       And call TSChannelSubmitOrder to submit the order
       
 
-    Examples: 
-      | CustomerType | SSN          | promotionCode            |ServiceBundle                        |RelationShip   | Package       | ICCIDNumber | MobileNumber |
-      | B2C          | 199811107136 | MT-Telia Mobil 30GB-1924 |MT-Mobile Privat Service Bundle-1743 |SIM Card Voice | TV-Lagom-1606 | 574698765432| 46730990947  |
+   Examples: 
+      | SSN          | promotionCode            | ServiceBundle                        | ICCIDNumber  | MobileNumber | 
+      | 199806166774 | MT-Telia Mobil 30GB-1924 | MT-Mobile Privat Service Bundle-1743 | 574698765432 | 46730990947  | 
+      | 199806166774 | MT-Telia Mobil 30GB-1924 | MT-Mobile Privat Service Bundle-1743 | 574698765432 | 46730990947  | 
+      | 199806166774 | MT-Telia Mobil 30GB-1924 | MT-Mobile Privat Service Bundle-1743 | 574698765432 | 46730990947  | 
+      | 199806166774 | MT-Telia Mobil 30GB-1924 | MT-Mobile Privat Service Bundle-1743 | 574698765432 | 46730990947  | 
+      | 199806166774 | MT-Telia Mobil 30GB-1924 | MT-Mobile Privat Service Bundle-1743 | 574698765432 | 46730990947  | 
+      | 199806166774 | MT-Telia Mobil 30GB-1924 | MT-Mobile Privat Service Bundle-1743 | 574698765432 | 46730990947  | 
   
   
-    
+  
 

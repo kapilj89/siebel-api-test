@@ -43,6 +43,7 @@ public class DataStorage {
     private String commitmentDuration;
     private ListOfData listOfData;
     private String rootId; 
+    private String SubscriptionRelId;
     private Map<String, String> AssetHolder ;
     
 }

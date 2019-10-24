@@ -1,10 +1,18 @@
 package se.telia.siebel.apiquerys;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+import org.joda.time.LocalDate;
 
 public class SiebelDateFormat {
 
@@ -46,18 +54,18 @@ public class SiebelDateFormat {
 //		String dueDate = siebelDateFormat.format(currentDate.getTime());
 //        return dueDate;
 //    }
-    public static String getCETtime() {
-    	Date today = new Date();
-        Date today1 = new Date(today.getTime());
+	public static String getCETtime() {
 
-    	SimpleDateFormat siebelDateFormat = new SimpleDateFormat(FORMAT);
-         Calendar cl = Calendar.getInstance();
-			cl.setTime(today1);
-			cl.add(Calendar.MINUTE,15);
-			String newtime = siebelDateFormat.format(cl.getTime());
-			System.out.println(newtime); 
-			return newtime;
-			}
+		Instant zulu = Instant.now(); // GMT, UTC+0
+		ZonedDateTime zdt = zulu.atZone(ZoneId.of("Europe/Paris"));
+		Date date1 = Timestamp.valueOf(zdt.toLocalDateTime());
+		System.out.println(date1);
+		// Date D=;
+		SimpleDateFormat siebelDateFormat = new SimpleDateFormat(FORMAT);
+		String finalCETDate = siebelDateFormat.format(date1);
+		System.out.println(finalCETDate);
+		return finalCETDate;
+	}
     public static String getCurentCETtime() {
     	Date today = new Date();
         Date today1 = new Date(today.getTime());
@@ -80,7 +88,20 @@ public class SiebelDateFormat {
         
         return BBDueDate;
     }
+    public static String MobileDueDate() {
+    	
+    	DateTimeZone timeZone = DateTimeZone.forID( "Europe/Paris" );
+    	DateTime now = new DateTime( timeZone ); // Or, for default time zone: new DateTime()
+    	DateTime firstDayofNextMonth = now.plusMonths(1).dayOfMonth().withMinimumValue().withTimeAtStartOfDay();
+    	Date date = firstDayofNextMonth.toDate();
 
+    	SimpleDateFormat siebelDateFormat = new SimpleDateFormat(FORMAT);
+		String mobileDueDate = siebelDateFormat.format(date);
+		System.out.println(mobileDueDate);
+		return mobileDueDate;
+	}
+
+    
     public static Date converteddate() throws Exception{
     	Date myDate = new Date();
     	System.out.println(myDate);

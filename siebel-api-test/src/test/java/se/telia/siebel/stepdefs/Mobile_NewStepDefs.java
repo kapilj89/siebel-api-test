@@ -1,40 +1,44 @@
 package se.telia.siebel.stepdefs;
 
-import com.siebel.ordermanagement.catalog.data.productdetails.ListOfProduct;
-import com.siebel.ordermanagement.catalog.data.productdetails.Product;
-import com.siebel.ordermanagement.configurator.EndConfigurationInput;
-import com.siebel.ordermanagement.configurator.cfginteractdata.Attribute;
-import com.siebel.ordermanagement.configurator.cfginteractdata.Item;
-import com.siebel.ordermanagement.configurator.cfginteractdata.ListOfData;
-import com.siebel.ordermanagement.quote.data.ListOfQuoteItem;
-import com.siebel.ordermanagement.quote.data.Quote;
-import com.siebel.ordermanagement.quote.data.QuoteItem;
-import com.siebel.ordermanagement.quote.data.QuoteItemXA;
+import static se.telia.siebel.apiquerys.GenerateQuoteNumber.getGeneratedQuoteNumber;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 
+import com.siebel.ordermanagement.catalog.data.productdetails.Product;
+import com.siebel.ordermanagement.configurator.cfginteractdata.Attribute;
+import com.siebel.ordermanagement.configurator.cfginteractdata.Item;
+import com.siebel.ordermanagement.configurator.cfginteractdata.Relationship;
+import com.siebel.ordermanagement.quote.data.ListOfQuote;
+import com.siebel.ordermanagement.quote.data.Quote;
+import com.siebel.ordermanagement.quote.data.QuoteItem;
+import com.siebel.xml.asset_management_complex_io.data.AssetMgmtAssetHeaderData;
+
 import cucumber.api.java8.En;
-import se.telia.siebel.apiquerys.*;
+import se.telia.siebel.apiquerys.QueryApplyPromotionOnExistingQuote;
+import se.telia.siebel.apiquerys.QueryAsset;
+import se.telia.siebel.apiquerys.QueryGetProductPromotionDetails;
+import se.telia.siebel.apiquerys.QueryModifyAssetToQuote;
+import se.telia.siebel.apiquerys.QueryQuote;
+import se.telia.siebel.apiquerys.QueryUpdateConfiguration;
+import se.telia.siebel.apiquerys.QueryUpgradePromotionToQuote;
+import se.telia.siebel.apiquerys.QuoteAddBundleItem;
+import se.telia.siebel.apiquerys.SiebelDateFormat;
+import se.telia.siebel.apiquerys.SiebelFlattenDataStructures;
 import se.telia.siebel.data.AccountDetails;
 import se.telia.siebel.data.DataStorage;
 
-import java.util.Date;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
 
-import static se.telia.siebel.apiquerys.GenerateQuoteNumber.getGeneratedQuoteNumber;
-import static se.telia.siebel.apiquerys.SiebelDateFormat.siebelDateFormat;
-import static se.telia.siebel.apiquerys.SiebelDateFormat.getTomorrowsDate;
-import static se.telia.siebel.apiquerys.SiebelFlattenDataStructures.getFlattenedQuoteItems;
-
-
-public class MobileStepDefs implements En {
-    DataStorage dataStorage;
+public class Mobile_NewStepDefs implements En {
+	DataStorage dataStorage;
 	String BundleId;
 
-	public MobileStepDefs(DataStorage dataStorage) {
+	public Mobile_NewStepDefs(DataStorage dataStorage) {
 
-		System.out.println("MobileStepDefs Constructor");
+		System.out.println("Mobile_NewStepDefs Constructor");
 		this.dataStorage = dataStorage;
 
 		And("^call GetProductPromotionDetailsService using promotionCode \"([^\"]*)\" and service \"([^\"]*)\" and get ProductId, PriceList$",
@@ -42,6 +46,7 @@ public class MobileStepDefs implements En {
 					System.out.println("\nGetProductDetailsService\n");
 					QueryGetProductPromotionDetails getProdDetails = new QueryGetProductPromotionDetails(dataStorage);
 					List<Product> productList = getProdDetails.getProductsDetails(productName, AdditionalService);
+
 					for (Product product : productList) {
 						if (AdditionalService.equalsIgnoreCase(product.getName())) {
 							BundleId = product.getID();
@@ -83,6 +88,10 @@ public class MobileStepDefs implements En {
 					for (Item item : itemList) {
 						List<Item> innerItemList = item.getItem();
 						for (Item innerItem : innerItemList) {
+							List<Relationship> relationship = innerItem.getRelationship();
+							for (Relationship relation : relationship) {
+								relation.setHasGenericsFlag("false");
+							}
 							List<Attribute> AttributeList = innerItem.getAttribute();
 							for (Attribute PresentAttribute : AttributeList) {
 								if (Attribute.equalsIgnoreCase(PresentAttribute.getName())) {
@@ -133,7 +142,7 @@ public class MobileStepDefs implements En {
 					Assert.assertTrue("No id from synchronizeQuoteOutput", result);
 					System.out.println("synchronizeQuoteOutput OK");
 				});
-		
+
 		And("^call AddVoice SynchronizeQuote to book number \"([^\"]*)\" for serivce \"([^\"]*)\" and \"([^\"]*)\" in a Mobile order$",
 				(String Number, String ServiceBundle, String addtionalBundle) -> {
 					System.out.println("\nSynchronizeQuote\n");
@@ -173,7 +182,6 @@ public class MobileStepDefs implements En {
 					Assert.assertTrue("No id from synchronizeQuoteOutput", result);
 					System.out.println("synchronizeQuoteOutput OK");
 				});
-
 
 	}
 }

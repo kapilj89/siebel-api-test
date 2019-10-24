@@ -47,6 +47,9 @@ public class CommonStepDefs implements En {
 							AssetHolder.put("AssetNumber" + i, assetNumber);
 							System.out.println("serviceAccountId=" + serviceAccountId);
 							dataStorage.setServiceAccountId(serviceAccountId);
+							dataStorage.setIntegrationId(assetMgmtAssetHeaderData.getIntegrationId());
+							dataStorage.setAssetNumber(assetNumber);
+
 						}
 					}
 					dataStorage.setAssetHolder(AssetHolder);

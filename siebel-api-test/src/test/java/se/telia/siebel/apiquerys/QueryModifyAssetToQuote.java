@@ -31,15 +31,13 @@ public class QueryModifyAssetToQuote {
 
 		ModifyAssetToQuoteInput modify = new ModifyAssetToQuoteInput();
 		modify.setQuoteNumber(quoteNumber);
-		// modify.setDueDate(SiebelDateFormat.siebelDateFormat(dataStorage.getMoveInAddressMap().get("MoveOutDate")));
-		 modify.setAssetNumber(Asset);
-//		modify.setAssetNumber(dataStorage.getAssetNumber());
+        modify.setAssetNumber(Asset);
 		modify.setTSChannelName("TELIASE");
-		// modify.setOrderSubType("Modify");
+		modify.setOrderSubType("Modify");
 		modify.setAccountId(dataStorage.getServiceAccountId());
 		modify.setTSReasonCode("No Reason");
 		modify.setPriceOnSync("Y");
-		// modify.setActiveDocumentId("");
+
 		ModifyAssetToQuoteOutput ModifyAssetToQuoteOutput = modifyAssetToQuotePort.modifyAssetToQuote(modify);
 		ListOfQuote listofQuote = ModifyAssetToQuoteOutput.getListOfQuote();
 		System.out.println("Quote=" + listofQuote);

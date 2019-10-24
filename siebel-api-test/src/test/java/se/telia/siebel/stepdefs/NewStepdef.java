@@ -440,13 +440,8 @@ public class NewStepdef implements En {
 					QueryGetProductDetails queryGetProdDetails = new QueryGetProductDetails(dataStorage);
 					Product product = queryGetProdDetails.getProductsDetails(productName);
 					String productID = product.getID();
-					String priceList = product.getPriceListId();
-					// String IntergrationID=product.getIntegrationId();
-					System.out.println("ProductID is :" + productID + ".  PriceList ID is :" + priceList);
-					// System.out.println("ProductID is :"+productID +".
-					// Integration ID is :"+IntergrationID);
+					System.out.println("ProductID is :" + productID);
 					dataStorage.setProductId(productID);
-					dataStorage.setPriceListId(priceList);
 				});
 
 		And("^call ApplyProductPromotionService and get quote", () -> {
@@ -461,6 +456,7 @@ public class NewStepdef implements En {
 					dataStorage.getPriceListId());
 			Assert.assertNotNull(quote);
 			dataStorage.setQuote(quote);
+			dataStorage.setQuoteNumber(quote.getQuoteNumber());
 		});
 
 		And("^call QuoteAddItems and get quote", () -> {
