@@ -34,6 +34,10 @@ public class Mobile_UpgradeStepDefs implements En {
 					System.out.println("Check for Asset " + Promotion);
 					AssetMgmtAssetHeaderData assetMgmtAssetHeaderData = queryAsset.getAssetMgmtAssetHeaderData(ssn,
 							Promotion);
+					if (assetMgmtAssetHeaderData == null) {
+						System.out.println("Asset is not available: " + Promotion);
+						Assert.assertNotNull("ASSET NOT FOUND ", assetMgmtAssetHeaderData);
+					}
 					String assetNumber = assetMgmtAssetHeaderData.getAssetNumber();
 					String serviceAccountId = assetMgmtAssetHeaderData.getServiceAccountId();
 					String ProductId = assetMgmtAssetHeaderData.getProductId();

@@ -39,6 +39,7 @@ public class CommonStepDefs implements En {
 						System.out.println("Asset MgmtAssetHeaderData" + assetMgmtAssetHeaderData);
 						if (assetMgmtAssetHeaderData == null) {
 							System.out.println("Asset is not available: " + Promotion[i]);
+							Assert.assertNotNull("ASSET NOT FOUND ", assetMgmtAssetHeaderData);
 						} else {
 							String assetNumber = assetMgmtAssetHeaderData.getAssetNumber();
 							String serviceAccountId = assetMgmtAssetHeaderData.getServiceAccountId();

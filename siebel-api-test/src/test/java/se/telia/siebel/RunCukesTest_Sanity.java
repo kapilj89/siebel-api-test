@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/resources/se/telia/SanityPackage"},
+		features = {"src/test/resources/se/telia/SanityPackage/Fixed"},
 		tags = {"@SanitySDUBroadband,@SanitySDUIPTV,@SanitySDUBroadbandIPTV,@SanitySDUBroadbandVOIP,"
 				+ "@SanityNewMDUBBIPTVVoIP,@SanityxDSLBroadband,@SanityxDSLBroadbandIPTVVOIP"},
 		        plugin = {"pretty",

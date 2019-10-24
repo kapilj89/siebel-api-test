@@ -59,7 +59,7 @@ public class Mobile_ModifyStepDefs implements En {
 							ServiceBundle, null, null);
 					dataStorage.setPrimaryOrganizationId(quoteList.getQuote().get(0).getPrimaryOrganizationId());
 					dataStorage.setPriceListId(quoteList.getQuote().get(0).getPriceListId());
-
+					
 					AccountDetails accountDetails = new AccountDetails();
 					accountDetails.setCustomerAccount(quoteList.getQuote().get(0).getAccountId());
 					accountDetails.setServiceAccount(quoteList.getQuote().get(0).getServiceAccountId());
@@ -84,6 +84,7 @@ public class Mobile_ModifyStepDefs implements En {
 			String dueDate = SiebelDateFormat.getCETtime();
 			QueryApplyPromotionOnExistingQuote queryApplyProductPromotion = new QueryApplyPromotionOnExistingQuote(
 					dataStorage);
+			System.out.println("AccountDetails :" + dataStorage.getAccountDetails());
 			Quote quote = queryApplyProductPromotion.applyProductPromotion(dataStorage.getAccountDetails(), quoteNumber,
 					dueDate, dataStorage.getPrimaryOrganizationId(), dataStorage.getProductId(),
 					dataStorage.getPriceListId());

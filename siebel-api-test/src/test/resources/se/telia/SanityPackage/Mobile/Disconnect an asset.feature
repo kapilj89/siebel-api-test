@@ -14,6 +14,7 @@ Feature: Mobile Sanity Disconnect
     Examples: 
       | Stream | SSN          | PromotionCode                                    | 
      #| Mobile | 198109020431 | MT-Telia Mobil 30GB-1924;MT-Telia Mobil 6GB-1924 | 
-      | MBB    | 198108296255 | MT-MBB Privat 20 GB no commit-174                | 
+      | MBB    | 199903232511 | MT-MBB Privat 20 GB no commit-1741;MT-MBB Privat 60 GB no commit-1741               | 
   
 
+#OrderID - 5-3478038182

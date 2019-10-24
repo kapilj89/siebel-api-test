@@ -18,10 +18,11 @@ Feature: Mobile-Upgrade/downgrade/sidegrade for MobileVoice and MBB
   
     Examples: 
       | Stream/Scenario  | SSN          | PromotionCode                      | UpgradePromotion              | ServiceBundle                        | ReasonCode | Duration | NewPlan                            | OldPlan                       | 
-      | Mobile/Upgrade   | 199806166774 | MT-Telia Mobil 30GB-1924           | MT-Telia Mobil Unlimited-1924 | MT-Mobile Privat Service Bundle-1743 | Upgrade    | 12       | MT-Telia Mobil Unlimited Plan-1924 | MT-Telia Mobil 30GB Plan-1924 | 
-      | MBB/Upgrade      | 199806166774 | MT-MBB Privat 20 GB no commit-1741 | HW-Standalone Hardware-1725   | MT-MBB Privat Service Bundle-1741    | Upgrade    | 12       | MT-Telia Mobil Unlimited Plan-1924 | MT-Telia Mobil 30GB Plan-1924 | 
-      | Mobile/Downgrade | 199806166774 | MT-Telia Mobil 30GB-1924           | MT-Telia Mobil 6GB-1924       | MT-Mobile Privat Service Bundle-1743 | Downgrade  | 0        | MT-Telia Mobil 6GB Plan-1924       | MT-Telia Mobil 30GB Plan-1924 | 
-      | MBB/Downgrade    | 199806166774 | MT-MBB Privat 20 GB no commit-1741 | HW-Standalone Hardware-1725   | MT-MBB Privat Service Bundle-1741    | Downgrade  | 0        | MT-Telia Mobil 6GB Plan-1924       | MT-Telia Mobil 30GB Plan-1924 | 
-      | Mobile/Sidegrade | 199806166774 | MT-Telia Mobil 30GB-1924           | MT-Telia Mobil 30GB-1924      | MT-Mobile Privat Service Bundle-1743 | Sidegrade  | 0        | MT-Telia Mobil 30GB Plan-1924      | MT-Telia Mobil 30GB Plan-1924 | 
+      #| Mobile/Upgrade   | 199806166774 | MT-Telia Mobil 30GB-1924           | MT-Telia Mobil Unlimited-1924 | MT-Mobile Privat Service Bundle-1743 | Upgrade    | 12       | MT-Telia Mobil Unlimited Plan-1924 | MT-Telia Mobil 30GB Plan-1924 | 
+      | MBB/Upgrade      | 199903195486 | MT-MBB Privat 60 GB no commit-1741 | MT-MBB Privat 100 GB no commit-1741	   | MT-MBB Privat Service Bundle-1741    | Upgrade    | 12       | MT-MBB Privat 100GB-1741 | MT-MBB Privat 60GB-1741 | 
+      #| Mobile/Downgrade | 199806166774 | MT-Telia Mobil 30GB-1924           | MT-Telia Mobil 6GB-1924       | MT-Mobile Privat Service Bundle-1743 | Downgrade  | 0        | MT-Telia Mobil 6GB Plan-1924       | MT-Telia Mobil 30GB Plan-1924 | 
+      #| MBB/Downgrade    | 199806166774 | MT-MBB Privat 20 GB no commit-1741 | HW-Standalone Hardware-1725   | MT-MBB Privat Service Bundle-1741    | Downgrade  | 0        | MT-Telia Mobil 6GB Plan-1924       | MT-Telia Mobil 30GB Plan-1924 | 
+      #| Mobile/Sidegrade | 199806166774 | MT-Telia Mobil 30GB-1924           | MT-Telia Mobil 30GB-1924      | MT-Mobile Privat Service Bundle-1743 | Sidegrade  | 0        | MT-Telia Mobil 30GB Plan-1924      | MT-Telia Mobil 30GB Plan-1924 | 
   
   
+#Order ID- 5-3046722347
